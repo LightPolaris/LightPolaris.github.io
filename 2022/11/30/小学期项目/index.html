@@ -10,17 +10,18 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="斯坦福大学CVcs231n
-KNNL1&amp;#x2F;L2距离，超参数搜索，交叉验证
-k为超参数 
+    <meta name="description" content="斯坦福大学CV
+cs231n
+KNN
+L1/L2距离，超参数搜索，交叉验证
+k为超参数
 k为投票数
 L1distance
 
-
-
 L2 distence
 
-超参数无法重学习中得知如何设置，而是,"> 
+超参数
+无法重学习中得知如何设置，而是从实践中调,"> 
     <meta name="author" content="Polaris"> 
     <link rel="alternative" href="atom.xml" title="LightPolaris" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon2.png"> 
@@ -31,17 +32,18 @@ L2 distence
     
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="小学期机器学习 - LightPolaris"/>
-    <meta name="twitter:description" content="斯坦福大学CVcs231n
-KNNL1&amp;#x2F;L2距离，超参数搜索，交叉验证
-k为超参数 
+    <meta name="twitter:description" content="斯坦福大学CV
+cs231n
+KNN
+L1/L2距离，超参数搜索，交叉验证
+k为超参数
 k为投票数
 L1distance
 
-
-
 L2 distence
 
-超参数无法重学习中得知如何设置，而是,"/>
+超参数
+无法重学习中得知如何设置，而是从实践中调,"/>
     
     
     
@@ -49,17 +51,18 @@ L2 distence
     <meta property="og:site_name" content="LightPolaris"/>
     <meta property="og:type" content="object"/>
     <meta property="og:title" content="小学期机器学习 - LightPolaris"/>
-    <meta property="og:description" content="斯坦福大学CVcs231n
-KNNL1&amp;#x2F;L2距离，超参数搜索，交叉验证
-k为超参数 
+    <meta property="og:description" content="斯坦福大学CV
+cs231n
+KNN
+L1/L2距离，超参数搜索，交叉验证
+k为超参数
 k为投票数
 L1distance
 
-
-
 L2 distence
 
-超参数无法重学习中得知如何设置，而是,"/>
+超参数
+无法重学习中得知如何设置，而是从实践中调,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -101,232 +104,283 @@ L2 distence
 
         </div>
         <div class="content markdown">
-            <h1 id="斯坦福大学CV"><a href="#斯坦福大学CV" class="headerlink" title="斯坦福大学CV"></a>斯坦福大学CV</h1><p>cs231n</p>
-<h2 id="KNN"><a href="#KNN" class="headerlink" title="KNN"></a>KNN</h2><p><strong>L1&#x2F;L2距离，超参数搜索，交叉验证</strong></p>
-<p>k为超参数 </p>
+            <h1>斯坦福大学CV</h1>
+<p>cs231n</p>
+<h2 id="KNN">KNN</h2>
+<p><strong>L1/L2距离，超参数搜索，交叉验证</strong></p>
+<p>k为超参数</p>
 <p>k为投票数</p>
-<h3 id="L1distance"><a href="#L1distance" class="headerlink" title="L1distance"></a>L1distance</h3>
+<h3 id="L1distance">L1distance</h3>
 
+<h3 id="L2-distence">L2 distence</h3>
 
-
-<h3 id="L2-distence"><a href="#L2-distence" class="headerlink" title="L2 distence"></a>L2 distence</h3>
-
-<h3 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h3><p>无法重学习中得知如何设置，而是从实践中调整</p>
-<h3 id="建议"><a href="#建议" class="headerlink" title="建议"></a>建议</h3><ul>
+<h3 id="超参数">超参数</h3>
+<p>无法重学习中得知如何设置，而是从实践中调整</p>
+<h3 id="建议">建议</h3>
+<ul>
 <li>k值建议取大</li>
 <li>将数据集划分为训练集与测试集</li>
 <li>L1与L2 的选择也是超参数 建议都试一下</li>
 <li>将数据拆分为train, val和test;在val中选择超参数，在test中计算更好!</li>
 </ul>
-<h3 id="交叉验证"><a href="#交叉验证" class="headerlink" title="交叉验证"></a>交叉验证</h3><p>交叉验证:将数据分成多个部分，尝试每个部分作为验证，并平均结果</p>
-<p><strong>注：</strong>对小的数据集适用，深度学习，不适用</p>
+<h3 id="交叉验证">交叉验证</h3>
+<p>交叉验证:将数据分成多个部分，尝试每个部分作为验证，并平均结果</p>
+<p>**注：**对小的数据集适用，深度学习，不适用</p>
 <p><strong>(1)</strong> <strong>训练集相当于课后的练习题，用于日常的知识巩固。</strong></p>
 <p><strong>(2) 验证集相当于周考，用来纠正和强化学到的知识。</strong></p>
 <p><strong>(3) 测试集相当于期末考试，用来最终评估学习效果。</strong></p>
 <p>6：2：2</p>
-<h2 id="线性分类器"><a href="#线性分类器" class="headerlink" title="线性分类器"></a>线性分类器</h2><p><strong>参数化方法，偏置技巧，铰链损失，交叉熵损失，L2正则化</strong></p>
-
+<h2 id="线性分类器">线性分类器</h2>
+<p><strong>参数化方法，偏置技巧，铰链损失，交叉熵损失，L2正则化</strong></p>
 
 <p>在本模块中，我们将从最简单的函数开始，一个线性映射:</p>
-<h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><h4 id="SVM"><a href="#SVM" class="headerlink" title="SVM"></a>SVM</h4> 
-
+<h3 id="损失函数">损失函数</h3>
+<h4 id="SVM">SVM</h4>
+ 
 <p>s<strong>j</strong>为其他类的预测分数</p>
 <p>Sy<strong>i</strong>为 此样本对应标签类的预测分数</p>
 <p>其中<strong>Δ</strong>为超参数，实践调整</p>
 
 
+<h4 id="二分类SVM-注意！">二分类SVM 注意！</h4>
 
-
-<h4 id="二分类SVM-注意！"><a href="#二分类SVM-注意！" class="headerlink" title="二分类SVM 注意！"></a>二分类SVM 注意！</h4>
-
-<h3 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a><strong>正则化</strong></h3><p>主要目的是为了<strong>减轻模型的复杂度，而不是试图过拟合数据</strong></p>
+<h3 id="正则化"><strong>正则化</strong></h3>
+<p>主要目的是为了<strong>减轻模型的复杂度，而不是试图过拟合数据</strong></p>
 <p>使用分类正确的参数不只有W一个，由λ决定，为了消除λ 造成的歧义</p>
 <p>可以使用<strong>正则化</strong>来做到这个一点</p>
-<h4 id="L2平方范数"><a href="#L2平方范数" class="headerlink" title="L2平方范数"></a><strong>L2</strong>平方范数</h4><p>参数w的正则化损失</p>
-
+<h4 id="L2平方范数"><strong>L2</strong>平方范数</h4>
+<p>参数w的正则化损失</p>
 
 <p>调整后的损失</p>
 
-
 <p>详细为：</p>
-<h2 id="softmax分类器"><a href="#softmax分类器" class="headerlink" title="softmax分类器"></a>softmax分类器</h2>使用log的原因是因为 log函数的最大值寻找方便且简单
+<h2 id="softmax分类器">softmax分类器</h2>
+使用log的原因是因为 log函数的最大值寻找方便且简单
+<h3 id="swig￼15"></h3>
+<h2 id="优化器：梯度下降法">优化器：梯度下降法</h2>
+<p><strong>优化概述，局部搜索，学习率，解析/数值梯度</strong></p>
 
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h2 id="优化器：梯度下降法"><a href="#优化器：梯度下降法" class="headerlink" title="优化器：梯度下降法"></a>优化器：梯度下降法</h2><p><strong>优化概述，局部搜索，学习率，解析&#x2F;数值梯度</strong></p>
-
-
-<p>学习率（步长stepsize）是超参数 </p>
-<h2 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h2><p><strong>链式法则解释，实值电路，梯度流模式</strong></p>
+<p>学习率（步长stepsize）是超参数</p>
+<h2 id="反向传播">反向传播</h2>
+<p><strong>链式法则解释，实值电路，梯度流模式</strong></p>
 <p>链式法则</p>
-<h3 id="sigmod激活函数"><a href="#sigmod激活函数" class="headerlink" title="sigmod激活函数"></a>sigmod激活函数</h3>
+<h3 id="sigmod激活函数">sigmod激活函数</h3>
 
 <p>求导后</p>
 
-
-<h3 id="高维输入"><a href="#高维输入" class="headerlink" title="高维输入"></a>高维输入</h3><p>雅可比矩阵</p>
+<h3 id="高维输入">高维输入</h3>
+<p>雅可比矩阵</p>
 <p>矩阵中的元素，为输入值元素与输出值相比</p>
-<h2 id="神经网络1（框架）"><a href="#神经网络1（框架）" class="headerlink" title="神经网络1（框架）"></a>神经网络1（框架）</h2><p><strong>生物神经元模型，激活函数，神经网络结构，表征能力</strong></p>
+<h2 id="神经网络1（框架）">神经网络1（框架）</h2>
+<p><strong>生物神经元模型，激活函数，神经网络结构，表征能力</strong></p>
 <p>一个三分类的神经网络可以看作是</p>
-<h3 id="生物神经元建模"><a href="#生物神经元建模" class="headerlink" title="生物神经元建模"></a>生物神经元建模</h3>
+<h3 id="生物神经元建模">生物神经元建模</h3>
 
-<h3 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h3><p>激活函数类似于生物神经元的<strong>激活阈值</strong></p>
-<p>左sigmod 右tanh </p>
+<h3 id="激活函数">激活函数</h3>
+<p>激活函数类似于生物神经元的<strong>激活阈值</strong></p>
+<p>左sigmod 右tanh</p>
 
-
-<h4 id="sigmod"><a href="#sigmod" class="headerlink" title="sigmod"></a>sigmod</h4><p>sigmod函数将输入压缩至[0,1] <strong>神经元的放电速率</strong></p>
+<h4 id="sigmod">sigmod</h4>
+<p>sigmod函数将输入压缩至[0,1] <strong>神经元的放电速率</strong></p>
 <p><strong>缺点</strong></p>
 <ol>
 <li>sigmod 饱和会杀死梯度  注意：<strong>如果初始权值太大，那么大多数神经元将变得饱和，网络将几乎无法学习。</strong></li>
 <li>Sigmoid输出不是零中心的。</li>
 </ol>
-<h4 id="tanh"><a href="#tanh" class="headerlink" title="tanh"></a>tanh</h4><p>tanh函数将输入压缩至[-1,1]</p>
+<h4 id="tanh">tanh</h4>
+<p>tanh函数将输入压缩至[-1,1]</p>
 
+<h4 id="Relu-Rectified-Linear-Unit">Relu( Rectified Linear Unit)</h4>
+<p>修正的线性单元</p>
 
-
-
-<h4 id="Relu-Rectified-Linear-Unit"><a href="#Relu-Rectified-Linear-Unit" class="headerlink" title="Relu( Rectified Linear Unit)"></a>Relu( Rectified Linear Unit)</h4><p>修正的线性单元</p>
-
-
-<h5 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h5><ol>
+<h5 id="优点">优点</h5>
+<ol>
 <li>加快了随机梯度下降的收敛速度</li>
 <li>简单的将激活矩阵阈值为零。</li>
 </ol>
-<h5 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h5><p>ReLU单位在训练中很脆弱，可能会“死亡”。</p>
+<h5 id="缺点">缺点</h5>
+<p>ReLU单位在训练中很脆弱，可能会“死亡”。</p>
 <p><strong>解决方式</strong>：设置适当的学习率</p>
 <p>Leaky Relu</p>
 <p>Leaky ReLU是解决“濒死ReLU”问题的一个尝试。</p>
 <p>x小于零时会有一个小的正斜率</p>
-<h3 id="神经网络结构"><a href="#神经网络结构" class="headerlink" title="神经网络结构"></a>神经网络结构</h3><p>逐层构建</p>
+<h3 id="神经网络结构">神经网络结构</h3>
+<p>逐层构建</p>
 <p>网络的层数越高，网络的容量越大，也就是时说网络的的描述能力越好</p>
-
 
 <p>这既是一件<strong>好事</strong>(因为我们可以学会对更复杂的数据进行分类)</p>
 <p>也是一件<strong>坏事</strong>(因为更容易对训练数据进行过拟合)。</p>
 
-
 <p>更倾向于使用<strong>大的神经网络</strong>，其出现的<strong>过拟合问题</strong>可以通过某些方法（例如<strong>L2正则化</strong>缓解）</p>
-<h2 id="数据设置于与损失函数"><a href="#数据设置于与损失函数" class="headerlink" title="数据设置于与损失函数"></a>数据设置于与损失函数</h2><h3 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h3>
+<h2 id="数据设置于与损失函数">数据设置于与损失函数</h2>
+<h3 id="数据处理">数据处理</h3>
 
-<h4 id="平均消去法"><a href="#平均消去法" class="headerlink" title="平均消去法"></a>平均消去法</h4><p>将数据转换为以原点为中心分布</p>
-<h4 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h4><p>一种方法是将每一个维度除以它的标准差</p>
+<h4 id="平均消去法">平均消去法</h4>
+<p>将数据转换为以原点为中心分布</p>
+<h4 id="标准化">标准化</h4>
+<p>一种方法是将每一个维度除以它的标准差</p>
 <p>一种是它是零中心</p>
-<h4 id="PCA-x2F-Whitening"><a href="#PCA-x2F-Whitening" class="headerlink" title="PCA&#x2F;Whitening"></a>PCA&#x2F;Whitening</h4><p>数据降维的方法</p>
+<h4 id="PCA-Whitening">PCA/Whitening</h4>
+<p>数据降维的方法</p>
 <p>在卷积神经网络中不被使用</p>
-<h3 id="权重初始化"><a href="#权重初始化" class="headerlink" title="权重初始化"></a>权重初始化</h3><p>不能全部为零， 而是小的随机数</p>
+<h3 id="权重初始化">权重初始化</h3>
+<p>不能全部为零， 而是小的随机数</p>
 <p>权重</p>
-<h4 id="偏执初始化"><a href="#偏执初始化" class="headerlink" title="偏执初始化"></a>偏执初始化</h4><p>选择较小的值，符合高斯分布</p>
-<h4 id="批标准化"><a href="#批标准化" class="headerlink" title="批标准化"></a>批标准化</h4><p>批处理规范化对于糟糕的初始化具有更强的鲁棒性。</p>
-<h4 id="L2正则化"><a href="#L2正则化" class="headerlink" title="L2正则化"></a>L2正则化</h4>
+<h4 id="偏执初始化">偏执初始化</h4>
+<p>选择较小的值，符合高斯分布</p>
+<h4 id="批标准化">批标准化</h4>
+<p>批处理规范化对于糟糕的初始化具有更强的鲁棒性。</p>
+<h4 id="L2正则化">L2正则化</h4>
 
 <p>λ是正则化的力度</p>
 <p>使用L2正则化最终意味着每个权重都是线性衰减的:<strong>向零方向</strong>衰减。</p>
-<h4 id="L1正则化"><a href="#L1正则化" class="headerlink" title="L1正则化"></a>L1正则化</h4><p>有趣的属性：它导致权向量在优化期间变得稀疏（非常接近与0）</p>
+<h4 id="L1正则化">L1正则化</h4>
+<p>有趣的属性：它导致权向量在优化期间变得稀疏（非常接近与0）</p>
 <p>几乎忽略噪音的影响</p>
 <p><strong>推荐使用L2正则化</strong></p>
-<h4 id="最大规范约束"><a href="#最大规范约束" class="headerlink" title="最大规范约束"></a>最大规范约束</h4><p>特性，即使学习率设置得太高，网络也不会“爆炸”，因为更新总是有界的。</p>
-<h4 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h4><p>非常有效</p>
-
-
-
+<h4 id="最大规范约束">最大规范约束</h4>
+<p>特性，即使学习率设置得太高，网络也不会“爆炸”，因为更新总是有界的。</p>
+<h4 id="Dropout">Dropout</h4>
+<p>非常有效</p>
 
 <p>也可在输入层执行</p>
-<h4 id="主题噪音"><a href="#主题噪音" class="headerlink" title="主题噪音"></a>主题噪音</h4><h4 id="偏执正则化"><a href="#偏执正则化" class="headerlink" title="偏执正则化"></a>偏执正则化</h4><p><strong>注意</strong> 会显著降低前向出传播的性能</p>
-<h4 id="损失函数-1"><a href="#损失函数-1" class="headerlink" title="损失函数"></a>损失函数</h4><h4 id="SVM-1"><a href="#SVM-1" class="headerlink" title="SVM"></a>SVM</h4>
+<h4 id="主题噪音">主题噪音</h4>
+<h4 id="偏执正则化">偏执正则化</h4>
+<p><strong>注意</strong> 会显著降低前向出传播的性能</p>
+<h4 id="损失函数-2">损失函数</h4>
+<h4 id="SVM-2">SVM</h4>
 
 <p><strong>Softmax</strong></p>
 <p>交叉熵损失</p>
-
 
 <p>当类别很多时计算代价很大</p>
 <p>警告:重要的是要注意，L2损失比更稳定的损失(如Softmax)更难优化。</p>
 <p>请注意，这与Softmax不同，在Softmax中，每个分数的精确值不那么重要:重要的是它们的大小是否合适。</p>
 <p>此L2损失的鲁棒性较差，因为损失值会引入巨大的梯度。</p>
-<h2 id="学习和评估过程"><a href="#学习和评估过程" class="headerlink" title="学习和评估过程"></a>学习和评估过程</h2><h3 id="梯度检查"><a href="#梯度检查" class="headerlink" title="梯度检查"></a>梯度检查</h3><h4 id="梯度更新"><a href="#梯度更新" class="headerlink" title="梯度更新"></a>梯度更新</h4>
+<h2 id="学习和评估过程">学习和评估过程</h2>
+<h3 id="梯度检查">梯度检查</h3>
+<h4 id="梯度更新">梯度更新</h4>
 
-<h4 id="相对误差"><a href="#相对误差" class="headerlink" title="相对误差"></a>相对误差</h4><p>使用双精度浮点数</p>
-<h3 id="参数更新"><a href="#参数更新" class="headerlink" title="参数更新"></a>参数更新</h3><h4 id="Vanilla-update"><a href="#Vanilla-update" class="headerlink" title="Vanilla update"></a>Vanilla update</h4>
+<h4 id="相对误差-swig￼32">相对误差</h4>
+<p>使用双精度浮点数</p>
+<h3 id="参数更新">参数更新</h3>
+<h4 id="Vanilla-update">Vanilla update</h4>
 
-<h4 id="Momentum-update"><a href="#Momentum-update" class="headerlink" title="Momentum update"></a>Momentum update</h4><h4 id="Nesterov-Momentum"><a href="#Nesterov-Momentum" class="headerlink" title="Nesterov Momentum"></a>Nesterov Momentum</h4>
+<h4 id="Momentum-update">Momentum update</h4>
+<h4 id="Nesterov-Momentum">Nesterov Momentum</h4>
 
-<h3 id="退火学习率"><a href="#退火学习率" class="headerlink" title="退火学习率"></a>退火学习率</h3><h4 id="Adagrad"><a href="#Adagrad" class="headerlink" title="Adagrad"></a>Adagrad</h4><h4 id="RMSprop"><a href="#RMSprop" class="headerlink" title="RMSprop"></a>RMSprop</h4><p>非常有效，但目前尚未发表的自适应学习速率方法</p>
-<h4 id="Adam"><a href="#Adam" class="headerlink" title="Adam"></a>Adam</h4><h2 id="Pascal-VOC2012"><a href="#Pascal-VOC2012" class="headerlink" title="Pascal VOC2012"></a>Pascal VOC2012</h2><p>一个数据集</p>
+<h3 id="退火学习率">退火学习率</h3>
+<h4 id="Adagrad">Adagrad</h4>
+<h4 id="RMSprop">RMSprop</h4>
+<p>非常有效，但目前尚未发表的自适应学习速率方法</p>
+<h4 id="Adam">Adam</h4>
+<h2 id="Pascal-VOC2012">Pascal VOC2012</h2>
+<p>一个数据集</p>
 <p>有5个文件夹</p>
-<h3 id="Annotations-文件夹"><a href="#Annotations-文件夹" class="headerlink" title="Annotations 文件夹"></a>Annotations 文件夹</h3><p>中放置的是xml格式的标签文件</p>
+<h3 id="Annotations-文件夹">Annotations 文件夹</h3>
+<p>中放置的是xml格式的标签文件</p>
 <p>ImageSets文件夹存放每一类图像的标签</p>
 <p>Action存放人的动作</p>
 <p>Layout存放具有人的部位</p>
 <p>Main存放图像识别，有20类</p>
 <p>Segmentation是可用于分割的数据</p>
-<h3 id="JPEGImages"><a href="#JPEGImages" class="headerlink" title="JPEGImages"></a>JPEGImages</h3><p>包含了PASCALVOC提供的所有图片 共17125张</p>
+<h3 id="JPEGImages">JPEGImages</h3>
+<p>包含了PASCALVOC提供的所有图片 共17125张</p>
 <p>格式 年份_编号.jpg 长宽 500*375 均不会超过500</p>
-<h3 id="SegmentationClass"><a href="#SegmentationClass" class="headerlink" title="SegmentationClass"></a>SegmentationClass</h3><p>保存了分割后的标签图 2913 张png 具体类别</p>
-<h3 id="SegmentationObject"><a href="#SegmentationObject" class="headerlink" title="SegmentationObject"></a>SegmentationObject</h3><p>保存了分割后的标签图 2913 张png 具体物体</p>
-<h2 id="COCO数据集"><a href="#COCO数据集" class="headerlink" title="COCO数据集"></a>COCO数据集</h2><h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3>
+<h3 id="SegmentationClass">SegmentationClass</h3>
+<p>保存了分割后的标签图 2913 张png 具体类别</p>
+<h3 id="SegmentationObject">SegmentationObject</h3>
+<p>保存了分割后的标签图 2913 张png 具体物体</p>
+<h2 id="COCO数据集">COCO数据集</h2>
+<h3 id="文件结构">文件结构</h3>
 
-<h2 id="ResNet"><a href="#ResNet" class="headerlink" title="ResNet"></a>ResNet</h2><p><strong>何恺明</strong></p>
+<h2 id="ResNet">ResNet</h2>
+<p><strong>何恺明</strong></p>
 <p>深度残差网络（Deep residual network）</p>
-
 
 <p>为了解决网络的退化问题</p>
 
-
-<h2 id="论文研读"><a href="#论文研读" class="headerlink" title="论文研读"></a>论文研读</h2><p><strong>Mining Latent Classes for Few-shot Segmentation</strong></p>
-<h3 id="开发潜在类"><a href="#开发潜在类" class="headerlink" title="开发潜在类"></a>开发潜在类</h3><h4 id="solving-jigsaws"><a href="#solving-jigsaws" class="headerlink" title="solving jigsaws"></a>solving jigsaws</h4><p>CFN（无上下文）、孪生神经网络、</p>
-<h3 id="FCN"><a href="#FCN" class="headerlink" title="FCN"></a>FCN</h3><p>像素级的分类</p>
-<h3 id="PPNet"><a href="#PPNet" class="headerlink" title="PPNet"></a>PPNet</h3><p>在单类和多类训练中实现卓越的性能。</p>
+<h2 id="论文研读">论文研读</h2>
+<p><strong>Mining Latent Classes for Few-shot Segmentation</strong></p>
+<h3 id="开发潜在类">开发潜在类</h3>
+<h4 id="solving-jigsaws">solving jigsaws</h4>
+<p>CFN（无上下文）、孪生神经网络、</p>
+<h3 id="FCN">FCN</h3>
+<p>像素级的分类</p>
+<h3 id="PPNet">PPNet</h3>
+<p>在单类和多类训练中实现卓越的性能。</p>
 <p>单类：即是说一个图片上有一个目标</p>
 <p>多类：一张图片上有多个目标</p>
-<h3 id="语义分割"><a href="#语义分割" class="headerlink" title="语义分割"></a>语义分割</h3><p>让计算机根据语义对图片中的所有像素进行分割</p>
-<h3 id="mIOU"><a href="#mIOU" class="headerlink" title="mIOU"></a>mIOU</h3><p>Mean Intersection over Union</p>
+<h3 id="语义分割">语义分割</h3>
+<p>让计算机根据语义对图片中的所有像素进行分割</p>
+<h3 id="mIOU">mIOU</h3>
+<p>Mean Intersection over Union</p>
 <p>平均交并比</p>
-<p><img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220701095510370.png" alt="image-20220701095510370"></p>
+<p><img src="C:%5CUsers%5CAdmin%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220701095510370.png" alt="image-20220701095510370"></p>
 <p>P:Prediction预测值</p>
 <p>G:Ground Truth真实值</p>
-<h4 id="IOU"><a href="#IOU" class="headerlink" title="IOU"></a>IOU</h4><p>交并比</p>
-<p><img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220701100159466.png" alt="image-20220701100159466"></p>
-<h3 id="自我监督学习"><a href="#自我监督学习" class="headerlink" title="自我监督学习"></a>自我监督学习</h3><p>无标签数据，图像利用自己的某些属性进行分类</p>
+<h4 id="IOU">IOU</h4>
+<p>交并比</p>
+<p><img src="C:%5CUsers%5CAdmin%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220701100159466.png" alt="image-20220701100159466"></p>
+<h3 id="自我监督学习">自我监督学习</h3>
+<p>无标签数据，图像利用自己的某些属性进行分类</p>
 <p>让后在用分出来的类进行监督学习</p>
-<h3 id="论文提到的新技术"><a href="#论文提到的新技术" class="headerlink" title="论文提到的新技术"></a>论文提到的新技术</h3><p>优化了PP-Net</p>
+<h3 id="论文提到的新技术">论文提到的新技术</h3>
+<p>优化了PP-Net</p>
 <ol>
 <li>利用这个新的框架，我们的方法可以直接应用于不可见的类，而不需要进一步的训练或微调，同时它不受特征破坏的问题。</li>
 <li>通过合并稳定的全局背景原型和相关的前景区域邻居来缓解原型偏差问题。</li>
 <li>模型需要更少的参数，以更快的速度评估，并获得更好的性能。</li>
 <li>我们的潜在类挖掘方法可以利用未标记数据并进一步提高性能。</li>
 </ol>
-<h4 id="细粒度"><a href="#细粒度" class="headerlink" title="细粒度"></a>细粒度</h4><p>狗区别他的种类</p>
-<h4 id="粗细粒度"><a href="#粗细粒度" class="headerlink" title="粗细粒度"></a>粗细粒度</h4><p>区别他是不是狗</p>
+<h4 id="细粒度">细粒度</h4>
+<p>狗区别他的种类</p>
+<h4 id="粗细粒度">粗细粒度</h4>
+<p>区别他是不是狗</p>
 <p>滑动平均</p>
-<h4 id="一种新的修正技术"><a href="#一种新的修正技术" class="headerlink" title="一种新的修正技术"></a>一种新的修正技术</h4><p>通过辅助监督挖掘新类</p>
+<h4 id="一种新的修正技术">一种新的修正技术</h4>
+<p>通过辅助监督挖掘新类</p>
 <p>可转移的元知识</p>
 <p>滑动平均</p>
 <p>缓解震荡</p>
-<h1 id="Colab"><a href="#Colab" class="headerlink" title="Colab"></a>Colab</h1><p>google 提供的云GPU服务器</p>
+<h1>Colab</h1>
+<p>google 提供的云GPU服务器</p>
 <p>基础环境配好了，很巴适，需要翻墙</p>
 <ol>
-<li><p>使用google账号登录<a target="_blank" rel="noopener" href="https://colab.research.google.com/">Google Colab</a></p>
+<li>
+<p>使用google账号登录<a target="_blank" rel="noopener" href="https://colab.research.google.com/">Google Colab</a></p>
 </li>
-<li><p>创建按笔记本，在修改中修改笔记本设置为GPU<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220705111026098.png" alt="image-20220705111026098"></p>
+<li>
+<p>创建按笔记本，在修改中修改笔记本设置为GPU<img src="C:%5CUsers%5CAdmin%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220705111026098.png" alt="image-20220705111026098"></p>
 </li>
-<li><p>将项目文件上传至GoogleDrive<a target="_blank" rel="noopener" href="https://drive.google.com/">https://drive.google.com/</a></p>
+<li>
+<p>将项目文件上传至GoogleDrivehttps://drive.google.com/</p>
 </li>
-<li><p>笔记本连接到googledrive</p>
+<li>
+<p>笔记本连接到googledrive</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> google.colab <span class="keyword">import</span> drive</span><br><span class="line">drive.mount(<span class="string">&#x27;/content/drive&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220705111229528.png" alt="image-20220705111229528">出现此标记则连接成功</p>
+<p><img src="C:%5CUsers%5CAdmin%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220705111229528.png" alt="image-20220705111229528">出现此标记则连接成功</p>
 </li>
-<li><p>数据集上传建议打包后上传，然后使用命令解压</p>
+<li>
+<p>数据集上传建议打包后上传，然后使用命令解压</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!unzip /content/drive/MyDrive/VOC2012.zip -d /content/drive/MyDrive/VOC</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>代码运行 注意运行路径</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">!pwd</span><br><span class="line">%cd /content/drive/MyDrive/MiningFSS-main/</span><br><span class="line">!python -W ignore main.py --data-root /content/drive/MyDrive/VOC --batch-size 3 --backbone resnet50 --fold 0 --shot 1</span><br></pre></td></tr></table></figure></li>
+<li>
+<p>代码运行 注意运行路径</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">!pwd</span><br><span class="line">%cd /content/drive/MyDrive/MiningFSS-main/</span><br><span class="line">!python -W ignore main.py --data-root /content/drive/MyDrive/VOC --batch-size 3 --backbone resnet50 --fold 0 --shot 1</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<h2 id="Colab常用命令"><a href="#Colab常用命令" class="headerlink" title="Colab常用命令"></a>Colab常用命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">pwd    #  查看所在路径</span><br><span class="line">%cd 路径 #  切换目录</span><br><span class="line">!ls # 查看当前目录所有文件名称</span><br><span class="line">!cp -i 拷贝文件 放置目录</span><br><span class="line">mkdir 文件夹名 # 创建文件夹</span><br><span class="line">touch 文件名 #  创建文件</span><br><span class="line">!rm -rf 要删除的文件名 # 删除文件</span><br><span class="line">!unrar x 压缩包名称 解压rar文件</span><br><span class="line">!unzip 压缩包 -d 到na</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="pytorch环境配置"><a href="#pytorch环境配置" class="headerlink" title="pytorch环境配置"></a>pytorch环境配置</h1><h2 id="集成开发环境"><a href="#集成开发环境" class="headerlink" title="集成开发环境"></a>集成开发环境</h2><p>Pycharm2021.3.3</p>
-<h2 id="环境部署"><a href="#环境部署" class="headerlink" title="环境部署"></a>环境部署</h2><h3 id="anaconda"><a href="#anaconda" class="headerlink" title="anaconda"></a>anaconda</h3><p>创建一个虚拟环境</p>
+<h2 id="Colab常用命令">Colab常用命令</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">pwd    #  查看所在路径</span><br><span class="line">%cd 路径 #  切换目录</span><br><span class="line">!ls # 查看当前目录所有文件名称</span><br><span class="line">!cp -i 拷贝文件 放置目录</span><br><span class="line">mkdir 文件夹名 # 创建文件夹</span><br><span class="line">touch 文件名 #  创建文件</span><br><span class="line">!rm -rf 要删除的文件名 # 删除文件</span><br><span class="line">!unrar x 压缩包名称 解压rar文件</span><br><span class="line">!unzip 压缩包 -d 到na</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1>pytorch环境配置</h1>
+<h2 id="集成开发环境">集成开发环境</h2>
+<p>Pycharm2021.3.3</p>
+<h2 id="环境部署">环境部署</h2>
+<h3 id="anaconda">anaconda</h3>
+<p>创建一个虚拟环境</p>
 <p>显卡为1070ti，nvidia版本456.71 所以使用的cuda版本为11.3</p>
-<h1 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h1><table>
+<h1>实验</h1>
+<table>
 <thead>
 <tr>
 <th>fold</th>
@@ -338,7 +392,8 @@ L2 distence
 <th>gap</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1</td>
 <td>59.2</td>
 <td>56.32</td>
@@ -383,9 +438,13 @@ L2 distence
 <td>64.7975</td>
 <td>-1.3025</td>
 </tr>
-</tbody></table>
-<h1 id="代码研究"><a href="#代码研究" class="headerlink" title="代码研究"></a>代码研究</h1><h2 id="argparse"><a href="#argparse" class="headerlink" title="argparse"></a>argparse</h2><p>为参数加载库</p>
-<h1 id="模型实际应用"><a href="#模型实际应用" class="headerlink" title="模型实际应用"></a>模型实际应用</h1><p>model.modules()</p>
+</tbody>
+</table>
+<h1>代码研究</h1>
+<h2 id="argparse">argparse</h2>
+<p>为参数加载库</p>
+<h1>模型实际应用</h1>
+<p>model.modules()</p>
 <p>迭代模型所有子层</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
@@ -423,7 +482,7 @@ L2 distence
     </div>
     
         <div class="side">
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%AF%E5%9D%A6%E7%A6%8F%E5%A4%A7%E5%AD%A6CV"><span class="toc-number">1.</span> <span class="toc-text">斯坦福大学CV</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#KNN"><span class="toc-number">1.1.</span> <span class="toc-text">KNN</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#L1distance"><span class="toc-number">1.1.1.</span> <span class="toc-text">L1distance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#L2-distence"><span class="toc-number">1.1.2.</span> <span class="toc-text">L2 distence</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E5%8F%82%E6%95%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">超参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.1.4.</span> <span class="toc-text">建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81"><span class="toc-number">1.1.5.</span> <span class="toc-text">交叉验证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%88%86%E7%B1%BB%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">线性分类器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.1.</span> <span class="toc-text">损失函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SVM"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">SVM</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%88%86%E7%B1%BBSVM-%E6%B3%A8%E6%84%8F%EF%BC%81"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">二分类SVM 注意！</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">1.2.2.</span> <span class="toc-text">正则化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#L2%E5%B9%B3%E6%96%B9%E8%8C%83%E6%95%B0"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">L2平方范数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#softmax%E5%88%86%E7%B1%BB%E5%99%A8"><span class="toc-number">1.3.</span> <span class="toc-text">softmax分类器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.3.1.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E5%99%A8%EF%BC%9A%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="toc-number">1.4.</span> <span class="toc-text">优化器：梯度下降法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD"><span class="toc-number">1.5.</span> <span class="toc-text">反向传播</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sigmod%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.1.</span> <span class="toc-text">sigmod激活函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BB%B4%E8%BE%93%E5%85%A5"><span class="toc-number">1.5.2.</span> <span class="toc-text">高维输入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C1%EF%BC%88%E6%A1%86%E6%9E%B6%EF%BC%89"><span class="toc-number">1.6.</span> <span class="toc-text">神经网络1（框架）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E7%89%A9%E7%A5%9E%E7%BB%8F%E5%85%83%E5%BB%BA%E6%A8%A1"><span class="toc-number">1.6.1.</span> <span class="toc-text">生物神经元建模</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.2.</span> <span class="toc-text">激活函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sigmod"><span class="toc-number">1.6.2.1.</span> <span class="toc-text">sigmod</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tanh"><span class="toc-number">1.6.2.2.</span> <span class="toc-text">tanh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Relu-Rectified-Linear-Unit"><span class="toc-number">1.6.2.3.</span> <span class="toc-text">Relu( Rectified Linear Unit)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">1.6.2.3.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9"><span class="toc-number">1.6.2.3.2.</span> <span class="toc-text">缺点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84"><span class="toc-number">1.6.3.</span> <span class="toc-text">神经网络结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AE%BE%E7%BD%AE%E4%BA%8E%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"><span class="toc-number">1.7.</span> <span class="toc-text">数据设置于与损失函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="toc-number">1.7.1.</span> <span class="toc-text">数据处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E6%B6%88%E5%8E%BB%E6%B3%95"><span class="toc-number">1.7.1.1.</span> <span class="toc-text">平均消去法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E5%8C%96"><span class="toc-number">1.7.1.2.</span> <span class="toc-text">标准化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PCA-x2F-Whitening"><span class="toc-number">1.7.1.3.</span> <span class="toc-text">PCA&#x2F;Whitening</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%83%E9%87%8D%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.7.2.</span> <span class="toc-text">权重初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%81%8F%E6%89%A7%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.7.2.1.</span> <span class="toc-text">偏执初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%B9%E6%A0%87%E5%87%86%E5%8C%96"><span class="toc-number">1.7.2.2.</span> <span class="toc-text">批标准化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#L2%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">1.7.2.3.</span> <span class="toc-text">L2正则化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#L1%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">1.7.2.4.</span> <span class="toc-text">L1正则化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E8%A7%84%E8%8C%83%E7%BA%A6%E6%9D%9F"><span class="toc-number">1.7.2.5.</span> <span class="toc-text">最大规范约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Dropout"><span class="toc-number">1.7.2.6.</span> <span class="toc-text">Dropout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E5%99%AA%E9%9F%B3"><span class="toc-number">1.7.2.7.</span> <span class="toc-text">主题噪音</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%81%8F%E6%89%A7%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">1.7.2.8.</span> <span class="toc-text">偏执正则化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0-1"><span class="toc-number">1.7.2.9.</span> <span class="toc-text">损失函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SVM-1"><span class="toc-number">1.7.2.10.</span> <span class="toc-text">SVM</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%92%8C%E8%AF%84%E4%BC%B0%E8%BF%87%E7%A8%8B"><span class="toc-number">1.8.</span> <span class="toc-text">学习和评估过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%AF%E5%BA%A6%E6%A3%80%E6%9F%A5"><span class="toc-number">1.8.1.</span> <span class="toc-text">梯度检查</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A2%AF%E5%BA%A6%E6%9B%B4%E6%96%B0"><span class="toc-number">1.8.1.1.</span> <span class="toc-text">梯度更新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E8%AF%AF%E5%B7%AE"><span class="toc-number">1.8.1.2.</span> <span class="toc-text">相对误差</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E6%9B%B4%E6%96%B0"><span class="toc-number">1.8.2.</span> <span class="toc-text">参数更新</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Vanilla-update"><span class="toc-number">1.8.2.1.</span> <span class="toc-text">Vanilla update</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Momentum-update"><span class="toc-number">1.8.2.2.</span> <span class="toc-text">Momentum update</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nesterov-Momentum"><span class="toc-number">1.8.2.3.</span> <span class="toc-text">Nesterov Momentum</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%80%E7%81%AB%E5%AD%A6%E4%B9%A0%E7%8E%87"><span class="toc-number">1.8.3.</span> <span class="toc-text">退火学习率</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Adagrad"><span class="toc-number">1.8.3.1.</span> <span class="toc-text">Adagrad</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RMSprop"><span class="toc-number">1.8.3.2.</span> <span class="toc-text">RMSprop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Adam"><span class="toc-number">1.8.3.3.</span> <span class="toc-text">Adam</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pascal-VOC2012"><span class="toc-number">1.9.</span> <span class="toc-text">Pascal VOC2012</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Annotations-%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.9.1.</span> <span class="toc-text">Annotations 文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JPEGImages"><span class="toc-number">1.9.2.</span> <span class="toc-text">JPEGImages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SegmentationClass"><span class="toc-number">1.9.3.</span> <span class="toc-text">SegmentationClass</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SegmentationObject"><span class="toc-number">1.9.4.</span> <span class="toc-text">SegmentationObject</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#COCO%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-number">1.10.</span> <span class="toc-text">COCO数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-number">1.10.1.</span> <span class="toc-text">文件结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ResNet"><span class="toc-number">1.11.</span> <span class="toc-text">ResNet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB"><span class="toc-number">1.12.</span> <span class="toc-text">论文研读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%BD%9C%E5%9C%A8%E7%B1%BB"><span class="toc-number">1.12.1.</span> <span class="toc-text">开发潜在类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#solving-jigsaws"><span class="toc-number">1.12.1.1.</span> <span class="toc-text">solving jigsaws</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FCN"><span class="toc-number">1.12.2.</span> <span class="toc-text">FCN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PPNet"><span class="toc-number">1.12.3.</span> <span class="toc-text">PPNet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2"><span class="toc-number">1.12.4.</span> <span class="toc-text">语义分割</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mIOU"><span class="toc-number">1.12.5.</span> <span class="toc-text">mIOU</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IOU"><span class="toc-number">1.12.5.1.</span> <span class="toc-text">IOU</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E6%88%91%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.12.6.</span> <span class="toc-text">自我监督学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BA%E6%96%87%E6%8F%90%E5%88%B0%E7%9A%84%E6%96%B0%E6%8A%80%E6%9C%AF"><span class="toc-number">1.12.7.</span> <span class="toc-text">论文提到的新技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%86%E7%B2%92%E5%BA%A6"><span class="toc-number">1.12.7.1.</span> <span class="toc-text">细粒度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B2%97%E7%BB%86%E7%B2%92%E5%BA%A6"><span class="toc-number">1.12.7.2.</span> <span class="toc-text">粗细粒度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E7%A7%8D%E6%96%B0%E7%9A%84%E4%BF%AE%E6%AD%A3%E6%8A%80%E6%9C%AF"><span class="toc-number">1.12.7.3.</span> <span class="toc-text">一种新的修正技术</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Colab"><span class="toc-number">2.</span> <span class="toc-text">Colab</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Colab%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">2.1.</span> <span class="toc-text">Colab常用命令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pytorch%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">pytorch环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-number">3.1.</span> <span class="toc-text">集成开发环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2"><span class="toc-number">3.2.</span> <span class="toc-text">环境部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#anaconda"><span class="toc-number">3.2.1.</span> <span class="toc-text">anaconda</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C"><span class="toc-number">4.</span> <span class="toc-text">实验</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E7%A0%94%E7%A9%B6"><span class="toc-number">5.</span> <span class="toc-text">代码研究</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#argparse"><span class="toc-number">5.1.</span> <span class="toc-text">argparse</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8"><span class="toc-number">6.</span> <span class="toc-text">模型实际应用</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">斯坦福大学CV</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#KNN"><span class="toc-number">1.1.</span> <span class="toc-text">KNN</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#L1distance"><span class="toc-number">1.1.1.</span> <span class="toc-text">L1distance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#L2-distence"><span class="toc-number">1.1.2.</span> <span class="toc-text">L2 distence</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E5%8F%82%E6%95%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">超参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.1.4.</span> <span class="toc-text">建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81"><span class="toc-number">1.1.5.</span> <span class="toc-text">交叉验证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%88%86%E7%B1%BB%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">线性分类器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.1.</span> <span class="toc-text">损失函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SVM"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">SVM</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%88%86%E7%B1%BBSVM-%E6%B3%A8%E6%84%8F%EF%BC%81"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">二分类SVM 注意！</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">1.2.2.</span> <span class="toc-text">正则化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#L2%E5%B9%B3%E6%96%B9%E8%8C%83%E6%95%B0"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">L2平方范数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#softmax%E5%88%86%E7%B1%BB%E5%99%A8"><span class="toc-number">1.3.</span> <span class="toc-text">softmax分类器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#swig%EF%BF%BC15"><span class="toc-number">1.3.1.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E5%99%A8%EF%BC%9A%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="toc-number">1.4.</span> <span class="toc-text">优化器：梯度下降法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD"><span class="toc-number">1.5.</span> <span class="toc-text">反向传播</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sigmod%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.1.</span> <span class="toc-text">sigmod激活函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BB%B4%E8%BE%93%E5%85%A5"><span class="toc-number">1.5.2.</span> <span class="toc-text">高维输入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C1%EF%BC%88%E6%A1%86%E6%9E%B6%EF%BC%89"><span class="toc-number">1.6.</span> <span class="toc-text">神经网络1（框架）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E7%89%A9%E7%A5%9E%E7%BB%8F%E5%85%83%E5%BB%BA%E6%A8%A1"><span class="toc-number">1.6.1.</span> <span class="toc-text">生物神经元建模</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.2.</span> <span class="toc-text">激活函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sigmod"><span class="toc-number">1.6.2.1.</span> <span class="toc-text">sigmod</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tanh"><span class="toc-number">1.6.2.2.</span> <span class="toc-text">tanh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Relu-Rectified-Linear-Unit"><span class="toc-number">1.6.2.3.</span> <span class="toc-text">Relu( Rectified Linear Unit)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">1.6.2.3.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9"><span class="toc-number">1.6.2.3.2.</span> <span class="toc-text">缺点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84"><span class="toc-number">1.6.3.</span> <span class="toc-text">神经网络结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AE%BE%E7%BD%AE%E4%BA%8E%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"><span class="toc-number">1.7.</span> <span class="toc-text">数据设置于与损失函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="toc-number">1.7.1.</span> <span class="toc-text">数据处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E6%B6%88%E5%8E%BB%E6%B3%95"><span class="toc-number">1.7.1.1.</span> <span class="toc-text">平均消去法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E5%8C%96"><span class="toc-number">1.7.1.2.</span> <span class="toc-text">标准化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PCA-Whitening"><span class="toc-number">1.7.1.3.</span> <span class="toc-text">PCA&#x2F;Whitening</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%83%E9%87%8D%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.7.2.</span> <span class="toc-text">权重初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%81%8F%E6%89%A7%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.7.2.1.</span> <span class="toc-text">偏执初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%B9%E6%A0%87%E5%87%86%E5%8C%96"><span class="toc-number">1.7.2.2.</span> <span class="toc-text">批标准化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#L2%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">1.7.2.3.</span> <span class="toc-text">L2正则化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#L1%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">1.7.2.4.</span> <span class="toc-text">L1正则化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E8%A7%84%E8%8C%83%E7%BA%A6%E6%9D%9F"><span class="toc-number">1.7.2.5.</span> <span class="toc-text">最大规范约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Dropout"><span class="toc-number">1.7.2.6.</span> <span class="toc-text">Dropout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E5%99%AA%E9%9F%B3"><span class="toc-number">1.7.2.7.</span> <span class="toc-text">主题噪音</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%81%8F%E6%89%A7%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">1.7.2.8.</span> <span class="toc-text">偏执正则化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0-2"><span class="toc-number">1.7.2.9.</span> <span class="toc-text">损失函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SVM-2"><span class="toc-number">1.7.2.10.</span> <span class="toc-text">SVM</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%92%8C%E8%AF%84%E4%BC%B0%E8%BF%87%E7%A8%8B"><span class="toc-number">1.8.</span> <span class="toc-text">学习和评估过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%AF%E5%BA%A6%E6%A3%80%E6%9F%A5"><span class="toc-number">1.8.1.</span> <span class="toc-text">梯度检查</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A2%AF%E5%BA%A6%E6%9B%B4%E6%96%B0"><span class="toc-number">1.8.1.1.</span> <span class="toc-text">梯度更新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E8%AF%AF%E5%B7%AE-swig%EF%BF%BC32"><span class="toc-number">1.8.1.2.</span> <span class="toc-text">相对误差</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E6%9B%B4%E6%96%B0"><span class="toc-number">1.8.2.</span> <span class="toc-text">参数更新</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Vanilla-update"><span class="toc-number">1.8.2.1.</span> <span class="toc-text">Vanilla update</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Momentum-update"><span class="toc-number">1.8.2.2.</span> <span class="toc-text">Momentum update</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nesterov-Momentum"><span class="toc-number">1.8.2.3.</span> <span class="toc-text">Nesterov Momentum</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%80%E7%81%AB%E5%AD%A6%E4%B9%A0%E7%8E%87"><span class="toc-number">1.8.3.</span> <span class="toc-text">退火学习率</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Adagrad"><span class="toc-number">1.8.3.1.</span> <span class="toc-text">Adagrad</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RMSprop"><span class="toc-number">1.8.3.2.</span> <span class="toc-text">RMSprop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Adam"><span class="toc-number">1.8.3.3.</span> <span class="toc-text">Adam</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pascal-VOC2012"><span class="toc-number">1.9.</span> <span class="toc-text">Pascal VOC2012</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Annotations-%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.9.1.</span> <span class="toc-text">Annotations 文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JPEGImages"><span class="toc-number">1.9.2.</span> <span class="toc-text">JPEGImages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SegmentationClass"><span class="toc-number">1.9.3.</span> <span class="toc-text">SegmentationClass</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SegmentationObject"><span class="toc-number">1.9.4.</span> <span class="toc-text">SegmentationObject</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#COCO%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-number">1.10.</span> <span class="toc-text">COCO数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-number">1.10.1.</span> <span class="toc-text">文件结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ResNet"><span class="toc-number">1.11.</span> <span class="toc-text">ResNet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB"><span class="toc-number">1.12.</span> <span class="toc-text">论文研读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%BD%9C%E5%9C%A8%E7%B1%BB"><span class="toc-number">1.12.1.</span> <span class="toc-text">开发潜在类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#solving-jigsaws"><span class="toc-number">1.12.1.1.</span> <span class="toc-text">solving jigsaws</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FCN"><span class="toc-number">1.12.2.</span> <span class="toc-text">FCN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PPNet"><span class="toc-number">1.12.3.</span> <span class="toc-text">PPNet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2"><span class="toc-number">1.12.4.</span> <span class="toc-text">语义分割</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mIOU"><span class="toc-number">1.12.5.</span> <span class="toc-text">mIOU</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IOU"><span class="toc-number">1.12.5.1.</span> <span class="toc-text">IOU</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E6%88%91%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.12.6.</span> <span class="toc-text">自我监督学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BA%E6%96%87%E6%8F%90%E5%88%B0%E7%9A%84%E6%96%B0%E6%8A%80%E6%9C%AF"><span class="toc-number">1.12.7.</span> <span class="toc-text">论文提到的新技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%86%E7%B2%92%E5%BA%A6"><span class="toc-number">1.12.7.1.</span> <span class="toc-text">细粒度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B2%97%E7%BB%86%E7%B2%92%E5%BA%A6"><span class="toc-number">1.12.7.2.</span> <span class="toc-text">粗细粒度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E7%A7%8D%E6%96%B0%E7%9A%84%E4%BF%AE%E6%AD%A3%E6%8A%80%E6%9C%AF"><span class="toc-number">1.12.7.3.</span> <span class="toc-text">一种新的修正技术</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">Colab</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Colab%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">2.1.</span> <span class="toc-text">Colab常用命令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">pytorch环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-number">3.1.</span> <span class="toc-text">集成开发环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2"><span class="toc-number">3.2.</span> <span class="toc-text">环境部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#anaconda"><span class="toc-number">3.2.1.</span> <span class="toc-text">anaconda</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">实验</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">代码研究</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#argparse"><span class="toc-number">5.1.</span> <span class="toc-text">argparse</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">模型实际应用</span></a></li></ol>
         </div>
     
 </div>
