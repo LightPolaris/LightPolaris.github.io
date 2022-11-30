@@ -22,12 +22,22 @@
 <p>单击 b 代码 后追加行</p>
 <p>双击d  删除行</p>
 <p>shift+enter 运行代码行</p>
+<h2 id="内核切换"><a href="#内核切换" class="headerlink" title="内核切换"></a>内核切换</h2><ol>
+<li><p>虚拟环境安装内核ipykernel</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda install ipykernel</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后，在当前环境下将该环境写入jupyter</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">注意：name后跟当前环境名 例如我当前的虚拟环境名为mydemo</span><br><span class="line">python -m ipykernel install --user --name mydemo --display-name mydemo</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ol>
 ]]></content>
       <categories>
         <category>Jupyter Notebook</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
+        <tag>Jupyter快捷键</tag>
+        <tag>Jupyter使用anacona虚拟环境</tag>
       </tags>
   </entry>
   <entry>
