@@ -113,21 +113,6 @@
       </tags>
   </entry>
   <entry>
-    <title>我的第一篇博客</title>
-    <url>/2022/11/27/hello-world/</url>
-    <content><![CDATA[<h1 id="欢迎来到我的博客"><a href="#欢迎来到我的博客" class="headerlink" title="欢迎来到我的博客"></a>欢迎来到我的博客</h1><p>我是来自野鸡大学的一名大学生，我随然出生卑微</p>
-<p>但我相信星星之火可以燎原</p>
-<p>我现在在努力成为一名全栈 或是栈溢出攻城狮</p>
-<img src="/2022/11/27/hello-world/image-20221210195500897.png" class="" title="image-20221210195500897">
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>jupyter Notebook 快捷键</title>
     <url>/2022/11/30/jupyter%20Notebook%20%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="jupyter-Notebook-使用"><a href="#jupyter-Notebook-使用" class="headerlink" title="jupyter Notebook 使用"></a>jupyter Notebook 使用</h1><h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><p>单击a 代码行前追加行</p>
@@ -148,6 +133,21 @@
       <tags>
         <tag>Jupyter快捷键</tag>
         <tag>Jupyter使用anacona虚拟环境</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2022/11/27/hello-world/</url>
+    <content><![CDATA[<h1 id="欢迎来到我的博客"><a href="#欢迎来到我的博客" class="headerlink" title="欢迎来到我的博客"></a>欢迎来到我的博客</h1><p>我是来自野鸡大学的一名大学生，我随然出生卑微</p>
+<p>但我相信星星之火可以燎原</p>
+<p>我现在在努力成为一名全栈 或是栈溢出攻城狮</p>
+<img src="/2022/11/27/hello-world/image-20221210195500897.png" class="" title="image-20221210195500897">
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
