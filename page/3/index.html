@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+
+  
+  
+  
+  
+  
+  
+  <title>lightpolaris</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="lightpolaris">
+<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:site_name" content="lightpolaris">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Polaris">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="lightpolaris" rel="home">lightpolaris</a>
+      </h1>
+      
+        <h2 class="site-description hitokoto"></h2>
+        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main">
+  
+    <article id="post-数据结构六大常用排序算法" class="post-数据结构六大常用排序算法 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/08/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%85%AD%E5%A4%A7%E5%B8%B8%E7%94%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">六大常用排序算法</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/08/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%85%AD%E5%A4%A7%E5%B8%B8%E7%94%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" data-id="cllb2psr3002cq0w80k4bexkw" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h4 id="六大常用排序算法"><a class="markdownIt-Anchor" href="#六大常用排序算法"></a> 六大常用排序算法</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">排序方法       时间复杂度            空间复杂度      稳定性    代码复杂度</span><br><span class="line">         最坏情况 平均情况  最好情况</span><br><span class="line">冒泡排序   O(N^2)  O(N^2)   O(N)       0(1)       稳定         简单</span><br><span class="line">直接排序   O(N^2)  O(N^2)   O(N^2)     O(1)       不稳定       简单</span><br><span class="line">直接插入   O(N^2)  O(nlogn) O(nlogn)   0(1)       稳定        简单</span><br><span class="line">快速排序   O(N^2)  O(nlogn) O(nlogn) 平均O(logn)  不稳定       较复杂</span><br><span class="line">                                    最坏情况O(n)</span><br><span class="line">堆排序    O(nlogn) O(nlogn) O(nlogn)   O(1)      不稳定        复杂</span><br><span class="line">归并排序  O(nlogn) O(nlogn) O(nlogn)   O(n)       稳定        较复杂</span><br></pre></td></tr></table></figure>
+<h4 id="较高级排序算法"><a class="markdownIt-Anchor" href="#较高级排序算法"></a> 较高级排序算法</h4>
+<h5 id="希尔排序shell"><a class="markdownIt-Anchor" href="#希尔排序shell"></a> 希尔排序（shell）</h5>
+<p>时间复杂度：<strong>最坏</strong>：O(N^2)  <strong>平均</strong>：O(N)~O(N^2)</p>
+<ul>
+<li>首先去一个整数d1 = n/2,将数据以d1为间隔分组，之后每组进行一次插入排序</li>
+<li>取第二个整数d2= d1/2, 重复上述步骤</li>
+<li>直至d 的值变为1 ，即完成排序</li>
+</ul>
+<p>也可以按{5，3，1}进行增量排序</p>
+<p>希尔排序每趟并不是使某些元素有序，而是使整体数据越来越趋近与有序</p>
+<h5 id="计数排序"><a class="markdownIt-Anchor" href="#计数排序"></a> 计数排序</h5>
+<p>时间复杂度：O(N)</p>
+<ul>
+<li>
+<p>先创建一个范围表例如 [0，n]推荐用字典</p>
+</li>
+<li>
+<p>设数据都在范围标内，然后然后遍历数据,对每一数据进行计数</p>
+</li>
+<li>
+<p>最后根据计数创建出排列的好的序列</p>
+</li>
+</ul>
+<p>缺点：对于精度高的数据，消耗的空间多</p>
+<h5 id="桶排序基于计数排序"><a class="markdownIt-Anchor" href="#桶排序基于计数排序"></a> 桶排序（基于计数排序）</h5>
+<p>时间复杂度：平均：O(n+k)  最坏 O(n^2*k)   空间复杂度：O(nk)   其中k = logmlogn  m为桶的容量</p>
+<p>将元素分在不同的桶内，再对桶中的元素进行排序</p>
+<ul>
+<li>但是对桶内的数据可以以冒泡排序</li>
+</ul>
+<h5 id="基数排序"><a class="markdownIt-Anchor" href="#基数排序"></a> 基数排序</h5>
+<p>时间复杂度 ： O(nk)  空间复杂度 O(n+K)</p>
+<ul>
+<li>若有一整数数列</li>
+<li>先按个位排序，再按十位排序</li>
+</ul>
+<p>按这个思路发散，即是基数排序</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/08/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%85%AD%E5%A4%A7%E5%B8%B8%E7%94%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+    <time datetime="2023-08-14T11:19:00.000Z" class="entry-date">
+        2023-08-14
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-Android框架" class="post-Android框架 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/02/03/Android%E6%A1%86%E6%9E%B6/">Android框架</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/02/03/Android%E6%A1%86%E6%9E%B6/" data-id="cllb2psql000rq0w82fwzd9l5" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="android整体框架"><a class="markdownIt-Anchor" href="#android整体框架"></a> Android整体框架</h1>
+<img src="/2023/02/03/Android%E6%A1%86%E6%9E%B6/image-20230203204133260.png" class title="image-20230203204133260">
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/02/03/Android%E6%A1%86%E6%9E%B6/">
+    <time datetime="2023-02-03T12:25:09.000Z" class="entry-date">
+        2023-02-03
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/Android/">Android</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-嵌入式单片机" class="post-嵌入式单片机 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/01/28/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%8D%95%E7%89%87%E6%9C%BA/">单片机入门</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/01/28/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%8D%95%E7%89%87%E6%9C%BA/" data-id="cllb2psqx001uq0w805yz0rjy" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="单片机"><a class="markdownIt-Anchor" href="#单片机"></a> 单片机</h1>
+<h2 id="mcu"><a class="markdownIt-Anchor" href="#mcu"></a> MCU</h2>
+<h3 id="stc89c52"><a class="markdownIt-Anchor" href="#stc89c52"></a> STC89C52</h3>
+<img src="/2023/01/28/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%8D%95%E7%89%87%E6%9C%BA/image-20230128172300787.png" class title="image-20230128172300787">
+<h3 id="命名规则"><a class="markdownIt-Anchor" href="#命名规则"></a> 命名规则</h3>
+<img src="/2023/01/28/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%8D%95%E7%89%87%E6%9C%BA/image-20230128173018523-16920138151583.png" class title="image-20230128173018523">
+<ul>
+<li>51单片机系列</li>
+<li>英特尔开发的8051单片机统称</li>
+<li>8位单片机</li>
+<li>国产STC公司单片机</li>
+</ul>
+<p>RAM：内存</p>
+<p>ROM：外存（硬盘）</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/01/28/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%8D%95%E7%89%87%E6%9C%BA/">
+    <time datetime="2023-01-28T08:58:19.000Z" class="entry-date">
+        2023-01-28
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/51%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/" rel="tag">51命名规则</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/STC89C52/" rel="tag">STC89C52</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-C语言选择语句&amp;循环语句" class="post-C语言选择语句&amp;循环语句 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2022/12/10/C%E8%AF%AD%E8%A8%80%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5&%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/">c语言选择语句&amp;循环语句</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2022/12/10/C%E8%AF%AD%E8%A8%80%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5&%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" data-id="cllb2psqs001fq0w83tw16naq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="选择语句"><a class="markdownIt-Anchor" href="#选择语句"></a> 选择语句</h1>
+<p>if else分支</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> input = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;input);</span><br><span class="line">    <span class="keyword">if</span> (input==<span class="number">1</span>)  <span class="comment">//选择语句</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;ok! input==1&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;input!=1&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="循环语句"><a class="markdownIt-Anchor" href="#循环语句"></a> 循环语句</h1>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> line = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(line&lt;<span class="number">30000</span>)</span><br><span class="line">    &#123; <span class="comment">//不满足一直循环</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;keep working!\n&quot;</span>);</span><br><span class="line">        line++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>  (line ==<span class="number">30000</span>) <span class="comment">//满足条件就执行</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;good!\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2022/12/10/C%E8%AF%AD%E8%A8%80%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5&%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/">
+    <time datetime="2022-12-10T14:48:25.000Z" class="entry-date">
+        2022-12-10
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/c%E8%AF%AD%E8%A8%80/">c语言</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" rel="tag">循环语句</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5/" rel="tag">选择语句</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-经验编程注释" class="post-经验编程注释 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2022/12/10/%E7%BB%8F%E9%AA%8C%E7%BC%96%E7%A8%8B%E6%B3%A8%E9%87%8A/">注释</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2022/12/10/%E7%BB%8F%E9%AA%8C%E7%BC%96%E7%A8%8B%E6%B3%A8%E9%87%8A/" data-id="cllb2psr20028q0w85a5th6at" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="注释"><a class="markdownIt-Anchor" href="#注释"></a> 注释</h1>
+<p>注释相当重要，是别人能读懂你代码的关键</p>
+<p>c语言不支持嵌套注释</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2022/12/10/%E7%BB%8F%E9%AA%8C%E7%BC%96%E7%A8%8B%E6%B3%A8%E9%87%8A/">
+    <time datetime="2022-12-10T14:44:25.000Z" class="entry-date">
+        2022-12-10
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/%E6%B3%A8%E9%87%8A/">注释</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%8F%E9%AA%8C/" rel="tag">经验</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-C语言字符串" class="post-C语言字符串 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2022/12/10/C%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2/">C语言字符串</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2022/12/10/C%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-id="cllb2psqq0018q0w8ho166z7r" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="字符串"><a class="markdownIt-Anchor" href="#字符串"></a> 字符串</h1>
+<p>一串字符 由英文双引号“”包含的内容</p>
+<p>字符串结束标志为’\0’</p>
+<p><strong>数组储存</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> arr[] = <span class="string">&quot;abc&quot;</span>; <span class="comment">// 数组储存</span></span><br></pre></td></tr></table></figure>
+<h1 id="转义字符"><a class="markdownIt-Anchor" href="#转义字符"></a> 转义字符</h1>
+<p>转变字符原来的意思</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;c:\tww\tera&quot;); // 转义字符 \t</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="/2022/12/10/C%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20221210222132566.png" class title="image-20221210222132566">
+<img src="/2022/12/10/C%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20221210222230600.png" class title="image-20221210222230600">
+<img src="/2022/12/10/C%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20221210222841134.png" class title="image-20221210222841134">
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2022/12/10/C%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+    <time datetime="2022-12-10T13:58:25.000Z" class="entry-date">
+        2022-12-10
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/c%E8%AF%AD%E8%A8%80/">c语言</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag">字符串</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AC%E7%A7%BB%E5%AD%97%E7%AC%A6/" rel="tag">转移字符</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-C语言变量作用域与生命周期" class="post-C语言变量作用域与生命周期 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2022/12/10/C%E8%AF%AD%E8%A8%80%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">变量作用域与生命周期</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2022/12/10/C%E8%AF%AD%E8%A8%80%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" data-id="cllb2psqp0014q0w8enim79b4" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="作用域"><a class="markdownIt-Anchor" href="#作用域"></a> 作用域</h1>
+<p>限定变量的使用范围</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> a = <span class="number">11</span> ; \\作用域在&#123;&#125;内</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<img src="/2022/12/10/C%E8%AF%AD%E8%A8%80%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/image-20221210212744968.png" class title="image-20221210212744968">
+<h1 id="生命周期"><a class="markdownIt-Anchor" href="#生命周期"></a> 生命周期</h1>
+<p>变量：从创建到销毁的时间段</p>
+<p>局部变量：进入局部范围开始，出局部范围结束f</p>
+<p>全局变量：从程序开始到程序结束</p>
+<h1 id="extern"><a class="markdownIt-Anchor" href="#extern"></a> extern</h1>
+<p>使用同一工程下的变量</p>
+<img src="/2022/12/10/C%E8%AF%AD%E8%A8%80%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/image-20221210213521080.png" class title="image-20221210213521080">
+<img src="/2022/12/10/C%E8%AF%AD%E8%A8%80%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/image-20221210213530930.png" class title="image-20221210213530930">
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2022/12/10/C%E8%AF%AD%E8%A8%80%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+    <time datetime="2022-12-10T13:19:39.000Z" class="entry-date">
+        2022-12-10
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/c%E8%AF%AD%E8%A8%80/">c语言</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/extern/" rel="tag">extern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" rel="tag">作用域与生命周期</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-C语言scanf函数" class="post-C语言scanf函数 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2022/12/10/C%E8%AF%AD%E8%A8%80scanf%E5%87%BD%E6%95%B0/">C语言 scanf函数</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2022/12/10/C%E8%AF%AD%E8%A8%80scanf%E5%87%BD%E6%95%B0/" data-id="cllb2psqm000tq0w87ay34ek7" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="c语言-scanf函数"><a class="markdownIt-Anchor" href="#c语言-scanf函数"></a> C语言 scanf函数</h1>
+<p>录入用户通过键盘输入的数据</p>
+<p>vscode方言</p>
+<h2 id="建议"><a class="markdownIt-Anchor" href="#建议"></a> 建议</h2>
+<p>scanf 可能会不安全，使用scanf_s代替</p>
+<p>或者宏定义</p>
+<p>#define _CRT_SECURE_NO_WARNINGS 1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a = 0;</span><br><span class="line">	int b = 0;</span><br><span class="line">	int sum = 0;</span><br><span class="line">	scanf(&quot;%d %d&quot;,&amp;a,&amp;b);</span><br><span class="line">	sum = a + b;</span><br><span class="line">	printf(&quot;sum = %d\n&quot;,sum);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<img src="/2022/12/10/C%E8%AF%AD%E8%A8%80scanf%E5%87%BD%E6%95%B0/image-20221210204712169.png" class title="image-20221210204712169">
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2022/12/10/C%E8%AF%AD%E8%A8%80scanf%E5%87%BD%E6%95%B0/">
+    <time datetime="2022-12-10T12:41:25.000Z" class="entry-date">
+        2022-12-10
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/c%E8%AF%AD%E8%A8%80/">c语言</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scanf%E5%87%BD%E6%95%B0%EF%BC%88scanf-s%EF%BC%89/" rel="tag">scanf函数（scanf_s）</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-C语言语言常量&amp;变量" class="post-C语言语言常量&amp;变量 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2022/12/10/C%E8%AF%AD%E8%A8%80%E8%AF%AD%E8%A8%80%E5%B8%B8%E9%87%8F&%E5%8F%98%E9%87%8F/">C语言常量&amp;变量</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2022/12/10/C%E8%AF%AD%E8%A8%80%E8%AF%AD%E8%A8%80%E5%B8%B8%E9%87%8F&%E5%8F%98%E9%87%8F/" data-id="cllb2psqt001iq0w8656obuqn" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="常量"><a class="markdownIt-Anchor" href="#常量"></a> 常量</h1>
+<p><strong>不能变的量</strong></p>
+<ul>
+<li>
+<p>字面常量 存在但无意义</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="number">3.14</span>; <span class="comment">//字面常量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>const修饰的常变量</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> omg = <span class="number">10</span>; <span class="comment">// 常属性 本质依然是变量</span></span><br></pre></td></tr></table></figure>
+<p>omg 不可修改了，否则报错</p>
+</li>
+<li>
+<p>#define定义的标识符常量</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MONEY 9999  <span class="comment">// 标识常量</span></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>枚举常量</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可以一一列举的量</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Sex</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="comment">// 可以一一列举的常量</span></span><br><span class="line">    MALE, <span class="comment">//默认从零开始 也可赋初值 MALE = 1</span></span><br><span class="line">    FEMALE,</span><br><span class="line">    BOTH</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,MALE);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,FEMALE);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,BOTH);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="/2022/12/10/C%E8%AF%AD%E8%A8%80%E8%AF%AD%E8%A8%80%E5%B8%B8%E9%87%8F&%E5%8F%98%E9%87%8F/image-20221210215628304.png" class title="image-20221210215628304">
+</li>
+</ul>
+<h1 id="变量"><a class="markdownIt-Anchor" href="#变量"></a> 变量</h1>
+<p>可以改变的</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> age = <span class="number">20</span>;   <span class="comment">//变量</span></span><br><span class="line"><span class="type">int</span> age; <span class="comment">//不推荐</span></span><br></pre></td></tr></table></figure>
+<h3 id="局部变量"><a class="markdownIt-Anchor" href="#局部变量"></a> 局部变量</h3>
+<p>作用域在：变量所在的局部范围</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">1</span>;  \\局部变量 </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="全局变量"><a class="markdownIt-Anchor" href="#全局变量"></a> 全局变量</h3>
+<p>作用域在：整个工程</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">111</span>; \\ 全局变量 不建议和局部变量重名</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">1</span>;  \\局部变量 </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当两者重名时 <strong>局部变量优先</strong></p>
+<ul>
+<li>局部变量和全局变量能同时存在，但局部变量优先与全局变量</li>
+<li>变量要定义在代码块前面</li>
+</ul>
+<p>局部变量作用域：<strong>所在代码块内</strong></p>
+<p>全局变量作用域：<strong>整个工程</strong></p>
+<p>变量生命周期：局部变量进入所在代码块开始，出结束，全局变量：整个程序开始到结束</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2022/12/10/C%E8%AF%AD%E8%A8%80%E8%AF%AD%E8%A8%80%E5%B8%B8%E9%87%8F&%E5%8F%98%E9%87%8F/">
+    <time datetime="2022-12-10T12:32:25.000Z" class="entry-date">
+        2022-12-10
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/c%E8%AF%AD%E8%A8%80/">c语言</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/enum/" rel="tag">enum</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8F%98%E9%87%8F/" rel="tag">变量</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B8%B8%E9%87%8F/" rel="tag">常量</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-C语言数据类型" class="post-C语言数据类型 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2022/12/10/C%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">C语言数据类型</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2022/12/10/C%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="cllb2psqr001bq0w84pus24t2" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="数据类型"><a class="markdownIt-Anchor" href="#数据类型"></a> 数据类型</h1>
+<h2 id="字符类型char"><a class="markdownIt-Anchor" href="#字符类型char"></a> 字符类型char</h2>
+<p>char  ：字符类型    %c    字节：1</p>
+<h2 id="短整型short"><a class="markdownIt-Anchor" href="#短整型short"></a> 短整型short</h2>
+<p>short：短整型    %d    字节：2</p>
+<h2 id="整形int"><a class="markdownIt-Anchor" href="#整形int"></a> 整形int</h2>
+<p>int：整型    %d      字节：4</p>
+<h2 id="长整型long"><a class="markdownIt-Anchor" href="#长整型long"></a> 长整型long</h2>
+<p>long：长整型    %d    字节：4</p>
+<h2 id="更长整形long-long"><a class="markdownIt-Anchor" href="#更长整形long-long"></a> 更长整形long long</h2>
+<p>long long：更长整型    %d     字节：8</p>
+<h2 id="单精度浮点型float"><a class="markdownIt-Anchor" href="#单精度浮点型float"></a> 单精度浮点型float</h2>
+<p>float：单精度浮点型    %d    字节：4</p>
+<h2 id="双精度浮点型double"><a class="markdownIt-Anchor" href="#双精度浮点型double"></a> 双精度浮点型double</h2>
+<p>double：双精度浮点型    %lf    字节：8</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\\申明方法</span><br><span class="line">数据类型 变量名 = 值</span><br><span class="line">\\ 例 整形数据类型申明办法</span><br><span class="line"><span class="type">int</span> test = <span class="number">1</span> </span><br></pre></td></tr></table></figure>
+<p>%x:十六进制</p>
+<p>%p：地址</p>
+<h2 id="各数据数据大小"><a class="markdownIt-Anchor" href="#各数据数据大小"></a> 各数据数据大小</h2>
+<p>单位：字节</p>
+<img src="/2022/12/10/C%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/image-20221210202850016.png" class title="image-20221210202850016">
+<h2 id="数组"><a class="markdownIt-Anchor" href="#数组"></a> 数组</h2>
+<p><strong>一组相同类型元素的集合</strong></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2022/12/10/C%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+    <time datetime="2022-12-10T11:53:17.000Z" class="entry-date">
+        2022-12-10
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/c%E8%AF%AD%E8%A8%80/">c语言</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="tag">数据类型</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+  
+    <nav id="pagination">
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
+      </nav>
+    </nav>
+  
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-content">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jupyter-Notebook/">Jupyter Notebook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python%E7%B1%BB/">Python类</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tensorflow/">Tensorflow</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/c%E8%AF%AD%E8%A8%80/">c语言</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B3%A8%E9%87%8A/">注释</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2023/08/14/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0&%E6%93%8D%E4%BD%9C%E7%AC%A6/">C语言函数&amp;操作符</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/14/AI%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">线性回归</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/14/Python_Pandas/">pandas</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/14/Python_Matplotlib/">Matplotlib</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/14/Python_Numpy/">Numpy</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/51%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/" rel="tag">51命名规则</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" rel="tag">BP神经网络</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jupyter%E4%BD%BF%E7%94%A8anacona%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/" rel="tag">Jupyter使用anacona虚拟环境</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jupyter%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="tag">Jupyter快捷键</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MSE/" rel="tag">MSE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" rel="tag">Python第三方库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STC89C52/" rel="tag">STC89C52</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tensor%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" rel="tag">Tensor常用函数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VScode-C%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/" rel="tag">VScode C编译环境</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VScode-%E5%88%9B%E5%BB%BAC-C-%E9%A1%B9%E7%9B%AE/" rel="tag">VScode 创建C&#x2F;C++ 项目</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/argmax/" rel="tag">argmax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/assign-sub/" rel="tag">assign_sub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/axis%E5%8F%82%E6%95%B0/" rel="tag">axis参数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bfs/" rel="tag">bfs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/const/" rel="tag">const</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contains/" rel="tag">contains</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/enum/" rel="tag">enum</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/enumerate/" rel="tag">enumerate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/extern/" rel="tag">extern</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iter/" rel="tag">iter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ndarray/" rel="tag">ndarray</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/one-hot/" rel="tag">one_hot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" rel="tag">python第三方库</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scanf/" rel="tag">scanf</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scanf%E5%87%BD%E6%95%B0%EF%BC%88scanf-s%EF%BC%89/" rel="tag">scanf函数（scanf_s）</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scikit-learn/" rel="tag">scikit-learn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sizeof/" rel="tag">sizeof</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6/" rel="tag">上海交通大学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6/" rel="tag">中国科学技术大学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" rel="tag">作用域与生命周期</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%98%E9%87%8F/" rel="tag">变量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/" rel="tag">四则运算</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AATensor/" rel="tag">如何创建一个Tensor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag">字符串</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%8E%87/" rel="tag">学习率</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%86%E5%8F%98%E9%87%8F%E6%A0%87%E8%AE%B0%E4%B8%BA%E5%8F%AF%E8%AE%AD%E7%BB%83%E7%9A%84/" rel="tag">将变量标记为可训练的</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B8%B8%E9%87%8F/" rel="tag">常量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B3%E5%9D%87%E5%88%86%E5%B8%83%E7%94%9F%E6%88%90%E5%BC%A0%E9%87%8F/" rel="tag">平均分布生成张量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B3%E6%96%B9%E3%80%81%E6%AC%A1%E6%96%B9%E3%80%81%E5%BC%80%E6%96%B9/" rel="tag">平方、次方、开方</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%A0%E9%87%8F/" rel="tag">张量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%BA%E8%BD%AC%E5%9E%8B/" rel="tag">强转型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" rel="tag">循环语句</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%AC%A6/" rel="tag">操作符</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="tag">数据类型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E5%A4%A7/" rel="tag">最大</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E5%B0%8F/" rel="tag">最小</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%87%E5%87%86%E5%B7%AE%E7%94%9F%E6%88%90/" rel="tag">标准差生成</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/" rel="tag">梯度下降算法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E6%80%81%E7%94%9F%E6%88%90/" rel="tag">正态生成</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B1%82%E5%AF%BC/" rel="tag">求导</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B2%BF%E7%9D%80%E6%8C%87%E5%AE%9A%E5%BC%A0%E9%87%8F%E6%B1%82%E5%92%8C/" rel="tag">沿着指定张量求和</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B2%BF%E7%9D%80%E6%8C%87%E5%AE%9A%E5%BC%A0%E9%87%8F%E6%B1%82%E5%9D%87%E5%80%BC/" rel="tag">沿着指定张量求均值</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6/" rel="tag">清华大学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%B9%E5%BE%81%E4%B8%8E%E6%A0%87%E7%AD%BE%E9%85%8D%E5%AF%B9/" rel="tag">特征与标签配对</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8B%AC%E7%83%AD%E7%BC%96%E7%A0%81/" rel="tag">独热编码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%90%86%E8%AE%BA/" rel="tag">理论</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/" rel="tag">矩阵乘法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%8F%E9%AA%8C/" rel="tag">经验</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B1%86%E7%93%A3/" rel="tag">豆瓣</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AC%E7%A7%BB%E5%AD%97%E7%AC%A6/" rel="tag">转移字符</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5/" rel="tag">选择语句</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" rel="tag">阿里云</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/51%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/" style="font-size: 10px;">51命名规则</a> <a href="/tags/BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">BP神经网络</a> <a href="/tags/Jupyter%E4%BD%BF%E7%94%A8anacona%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">Jupyter使用anacona虚拟环境</a> <a href="/tags/Jupyter%E5%BF%AB%E6%8D%B7%E9%94%AE/" style="font-size: 10px;">Jupyter快捷键</a> <a href="/tags/MSE/" style="font-size: 10px;">MSE</a> <a href="/tags/Python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" style="font-size: 10px;">Python第三方库</a> <a href="/tags/STC89C52/" style="font-size: 10px;">STC89C52</a> <a href="/tags/Tensor%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" style="font-size: 10px;">Tensor常用函数</a> <a href="/tags/VScode-C%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">VScode C编译环境</a> <a href="/tags/VScode-%E5%88%9B%E5%BB%BAC-C-%E9%A1%B9%E7%9B%AE/" style="font-size: 10px;">VScode 创建C/C++ 项目</a> <a href="/tags/argmax/" style="font-size: 10px;">argmax</a> <a href="/tags/assign-sub/" style="font-size: 10px;">assign_sub</a> <a href="/tags/axis%E5%8F%82%E6%95%B0/" style="font-size: 10px;">axis参数</a> <a href="/tags/bfs/" style="font-size: 10px;">bfs</a> <a href="/tags/const/" style="font-size: 10px;">const</a> <a href="/tags/contains/" style="font-size: 10px;">contains</a> <a href="/tags/enum/" style="font-size: 15px;">enum</a> <a href="/tags/enumerate/" style="font-size: 10px;">enumerate</a> <a href="/tags/extern/" style="font-size: 15px;">extern</a> <a href="/tags/iter/" style="font-size: 10px;">iter</a> <a href="/tags/ndarray/" style="font-size: 10px;">ndarray</a> <a href="/tags/one-hot/" style="font-size: 10px;">one_hot</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" style="font-size: 20px;">python第三方库</a> <a href="/tags/scanf/" style="font-size: 10px;">scanf</a> <a href="/tags/scanf%E5%87%BD%E6%95%B0%EF%BC%88scanf-s%EF%BC%89/" style="font-size: 10px;">scanf函数（scanf_s）</a> <a href="/tags/scikit-learn/" style="font-size: 10px;">scikit-learn</a> <a href="/tags/sizeof/" style="font-size: 10px;">sizeof</a> <a href="/tags/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6/" style="font-size: 10px;">上海交通大学</a> <a href="/tags/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6/" style="font-size: 10px;">中国科学技术大学</a> <a href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" style="font-size: 10px;">作用域与生命周期</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%8F%98%E9%87%8F/" style="font-size: 10px;">变量</a> <a href="/tags/%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/" style="font-size: 10px;">四则运算</a> <a href="/tags/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AATensor/" style="font-size: 10px;">如何创建一个Tensor</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 10px;">字符串</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%8E%87/" style="font-size: 10px;">学习率</a> <a href="/tags/%E5%B0%86%E5%8F%98%E9%87%8F%E6%A0%87%E8%AE%B0%E4%B8%BA%E5%8F%AF%E8%AE%AD%E7%BB%83%E7%9A%84/" style="font-size: 10px;">将变量标记为可训练的</a> <a href="/tags/%E5%B8%B8%E9%87%8F/" style="font-size: 10px;">常量</a> <a href="/tags/%E5%B9%B3%E5%9D%87%E5%88%86%E5%B8%83%E7%94%9F%E6%88%90%E5%BC%A0%E9%87%8F/" style="font-size: 10px;">平均分布生成张量</a> <a href="/tags/%E5%B9%B3%E6%96%B9%E3%80%81%E6%AC%A1%E6%96%B9%E3%80%81%E5%BC%80%E6%96%B9/" style="font-size: 10px;">平方、次方、开方</a> <a href="/tags/%E5%BC%A0%E9%87%8F/" style="font-size: 10px;">张量</a> <a href="/tags/%E5%BC%BA%E8%BD%AC%E5%9E%8B/" style="font-size: 10px;">强转型</a> <a href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">循环语句</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 20px;">技术</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%AC%A6/" style="font-size: 15px;">操作符</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" style="font-size: 10px;">数据类型</a> <a href="/tags/%E6%9C%80%E5%A4%A7/" style="font-size: 10px;">最大</a> <a href="/tags/%E6%9C%80%E5%B0%8F/" style="font-size: 10px;">最小</a> <a href="/tags/%E6%A0%87%E5%87%86%E5%B7%AE%E7%94%9F%E6%88%90/" style="font-size: 10px;">标准差生成</a> <a href="/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/" style="font-size: 10px;">梯度下降算法</a> <a href="/tags/%E6%AD%A3%E6%80%81%E7%94%9F%E6%88%90/" style="font-size: 10px;">正态生成</a> <a href="/tags/%E6%B1%82%E5%AF%BC/" style="font-size: 10px;">求导</a> <a href="/tags/%E6%B2%BF%E7%9D%80%E6%8C%87%E5%AE%9A%E5%BC%A0%E9%87%8F%E6%B1%82%E5%92%8C/" style="font-size: 10px;">沿着指定张量求和</a> <a href="/tags/%E6%B2%BF%E7%9D%80%E6%8C%87%E5%AE%9A%E5%BC%A0%E9%87%8F%E6%B1%82%E5%9D%87%E5%80%BC/" style="font-size: 10px;">沿着指定张量求均值</a> <a href="/tags/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6/" style="font-size: 10px;">清华大学</a> <a href="/tags/%E7%89%B9%E5%BE%81%E4%B8%8E%E6%A0%87%E7%AD%BE%E9%85%8D%E5%AF%B9/" style="font-size: 10px;">特征与标签配对</a> <a href="/tags/%E7%8B%AC%E7%83%AD%E7%BC%96%E7%A0%81/" style="font-size: 10px;">独热编码</a> <a href="/tags/%E7%90%86%E8%AE%BA/" style="font-size: 15px;">理论</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/" style="font-size: 10px;">矩阵乘法</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 15px;">算法</a> <a href="/tags/%E7%BB%8F%E9%AA%8C/" style="font-size: 20px;">经验</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 10px;">语法</a> <a href="/tags/%E8%B1%86%E7%93%A3/" style="font-size: 10px;">豆瓣</a> <a href="/tags/%E8%BD%AC%E7%A7%BB%E5%AD%97%E7%AC%A6/" style="font-size: 10px;">转移字符</a> <a href="/tags/%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">选择语句</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 10px;">阿里云</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2023 Polaris
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

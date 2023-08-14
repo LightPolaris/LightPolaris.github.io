@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+
+  
+  
+  
+  
+  
+  
+  <title>lightpolaris</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="lightpolaris">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="lightpolaris">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Polaris">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="lightpolaris" rel="home">lightpolaris</a>
+      </h1>
+      
+        <h2 class="site-description hitokoto"></h2>
+        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main">
+  
+    <article id="post-AI_Tensor" class="post-AI_Tensor post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/08/14/AI_Tensor/">Tensor</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/08/14/AI_Tensor/" data-id="cllb2psq90004q0w8bxbc1rcb" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="tensorflow常见数据类型"><a class="markdownIt-Anchor" href="#tensorflow常见数据类型"></a> Tensorflow常见数据类型</h1>
+<h2 id="tensor张量多维数组"><a class="markdownIt-Anchor" href="#tensor张量多维数组"></a> Tensor(张量)：多维数组</h2>
+<img src="/2023/08/14/AI_Tensor/image-20220404154741326-16490584624432.png" class title="image-20220404154741326">
+<h3 id="数据类型"><a class="markdownIt-Anchor" href="#数据类型"></a> 数据类型</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tfint, tf.float ...</span></span><br><span class="line">tf.<span class="built_in">int</span> <span class="number">32</span>,tf.<span class="built_in">float</span> <span class="number">32</span>,tf.<span class="built_in">float</span> <span class="number">64</span></span><br><span class="line"><span class="comment"># tf.bool</span></span><br><span class="line">tf.constant([<span class="literal">True</span>, <span class="literal">False</span>])</span><br><span class="line"><span class="comment"># tf.string</span></span><br><span class="line">tf.constant(“Hello, world!”)</span><br></pre></td></tr></table></figure>
+<h4 id="如何创建一个tensor"><a class="markdownIt-Anchor" href="#如何创建一个tensor"></a> 如何创建一个Tensor</h4>
+<h5 id="使用关键字constant"><a class="markdownIt-Anchor" href="#使用关键字constant"></a> 使用关键字constant</h5>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tensorflow.constant(数据，dtype=数据类型(可选))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">tf.constant([<span class="number">1</span>,<span class="number">5</span>],dtype=tf.int64) <span class="comment">#创建一个张量</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(a.<span class="built_in">type</span>)</span><br><span class="line"><span class="built_in">print</span>(a.shape)</span><br><span class="line">结果：</span><br><span class="line">&lt;tf.Tensor([<span class="number">1</span>,<span class="number">5</span>]),shape=(<span class="number">2</span>,),dtype=int64)&gt; </span><br><span class="line">&lt;dtype:<span class="string">&#x27;int64&#x27;</span>&gt;</span><br><span class="line">(<span class="number">2</span>,)</span><br></pre></td></tr></table></figure>
+<img src="/2023/08/14/AI_Tensor/image-20220404160257477.png" class title="image-20220404160257477">
+<p>shape=(行数,列数)</p>
+<h5 id="创建tensor"><a class="markdownIt-Anchor" href="#创建tensor"></a> 创建Tensor</h5>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">tf.zeros(维度) <span class="comment"># 全为零的张量</span></span><br><span class="line">tf.ones(维度) <span class="comment"># 全为一的张量</span></span><br><span class="line">tf.fill(维度,指定值) <span class="comment"># 全为指定值的张量</span></span><br><span class="line"><span class="built_in">print</span>(aa,<span class="string">&#x27;\n&#x27;</span>,ab,<span class="string">&#x27;\n&#x27;</span>,ac)</span><br></pre></td></tr></table></figure>
+<img src="/2023/08/14/AI_Tensor/image-20220404183009649.png" class title="image-20220404183009649">
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/08/14/AI_Tensor/">
+    <time datetime="2023-08-14T13:49:17.000Z" class="entry-date">
+        2023-08-14
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/Tensorflow/">Tensorflow</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tensor%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" rel="tag">Tensor常用函数</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AATensor/" rel="tag">如何创建一个Tensor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%A0%E9%87%8F/" rel="tag">张量</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-AI超参数" class="post-AI超参数 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/08/14/AI%E8%B6%85%E5%8F%82%E6%95%B0/">超参数</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/08/14/AI%E8%B6%85%E5%8F%82%E6%95%B0/" data-id="cllb2psqj000nq0w8011rbfeb" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="学习率参数更新"><a class="markdownIt-Anchor" href="#学习率参数更新"></a> 学习率(参数更新)</h1>
+<p>lr学习率</p>
+<p>ωt：t时刻网络的参数</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>w</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>w</mi><mi>t</mi></msub><mo>−</mo><mi>l</mi><mi>r</mi><mo>∗</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>l</mi><mi>o</mi><mi>s</mi><mi>s</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msub><mi>w</mi><mi>t</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">w_{t+1}=w_{t}-lr*\frac{\partial loss}{\partial w_{t}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.638891em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.20744em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord mathnormal">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/08/14/AI%E8%B6%85%E5%8F%82%E6%95%B0/">
+    <time datetime="2023-08-14T13:14:10.000Z" class="entry-date">
+        2023-08-14
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/AI/">AI</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%8E%87/" rel="tag">学习率</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-AI_Tensorflow环境配置" class="post-AI_Tensorflow环境配置 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/08/14/AI_Tensorflow%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Tensorflow环境配置</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/08/14/AI_Tensorflow%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" data-id="cllb2psqb0006q0w80yiz2k62" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="tensorflow-环境配置"><a class="markdownIt-Anchor" href="#tensorflow-环境配置"></a> Tensorflow 环境配置</h3>
+<h4 id="环境配置"><a class="markdownIt-Anchor" href="#环境配置"></a> 环境配置</h4>
+<p>Python环境为3.7 ,最新版本不适配</p>
+<p>使用anaconda，安装时添加至系统path</p>
+<ol>
+<li>
+<p>使用Anconada Prompt 输入conda create -n TF2.1 python=3.7创建环境</p>
+</li>
+<li>
+<p>接着输入conda activate TF2.1 进入环境</p>
+</li>
+<li>
+<p>若是NVDIA显卡 可使用conda install cudatoolkit=10.1 和conda install cudnn 安装 显卡加速 和 英伟达深度学习包</p>
+</li>
+<li>
+<p>最后使用pip install tensorflow==2.1 安装tensorflow（若下载慢可加上-i <a target="_blank" rel="noopener" href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> 镜像）</p>
+</li>
+<li>
+<p>验证安装是否成功，紧接着输入python</p>
+</li>
+<li>
+<p>输入import tensorflow as tf ，输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(tf.__version__)</span><br></pre></td></tr></table></figure>
+<p>若出现‘’2.1.0“则安装成功</p>
+</li>
+<li>
+<p>配置pycharm集成式开发环境创建新项目使用刚配置的anconda环境</p>
+</li>
+<li>
+<p>在此项目内运行一下代码后</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line">tensorflow_version = tf.__version__</span><br><span class="line">gpu_available = tf.test.is_gpu_available()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;tensorflow version:&quot;</span>, tensorflow_version, <span class="string">&quot;\tGPU available:&quot;</span>, gpu_available)</span><br><span class="line"></span><br><span class="line">a = tf.constant([<span class="number">1.0</span>, <span class="number">2.0</span>], name=<span class="string">&quot;a&quot;</span>)</span><br><span class="line">b = tf.constant([<span class="number">1.0</span>, <span class="number">2.0</span>], name=<span class="string">&quot;b&quot;</span>)</span><br><span class="line">result = tf.add(a, b, name=<span class="string">&quot;add&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>结果为<img src="/2023/08/14/AI_Tensorflow%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/5" class title="image-20220402203359308">则开发环境安装成功</p>
+</li>
+</ol>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/08/14/AI_Tensorflow%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+    <time datetime="2023-08-14T12:06:07.000Z" class="entry-date">
+        2023-08-14
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/AI/">AI</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%8F%E9%AA%8C/" rel="tag">经验</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-Python常用第三方库国内镜像" class="post-Python常用第三方库国内镜像 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/08/14/Python%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/">Python常用第三方库国内镜像</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/08/14/Python%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/" data-id="cllb2psr00022q0w8hcp2dwub" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="python常用第三方库国内镜像"><a class="markdownIt-Anchor" href="#python常用第三方库国内镜像"></a> Python常用第三方库国内镜像</h1>
+<h2 id="使用教程"><a class="markdownIt-Anchor" href="#使用教程"></a> 使用教程</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tensorlow==X.X.X -i 镜像名</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">注意：清华大学的Pytorch镜像为cpu版本！！</span><br><span class="line"></span><br><span class="line">清华大学：https://pypi.tuna.tsinghua.edu.cn/simple/</span><br><span class="line">阿里云：http://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">中国科技大学：https://pypi.mirrors.ustc.edu.cn/simple/</span><br><span class="line">华中科技大学：http://pypi.hustunique.com/simple/</span><br><span class="line">上海交通大学：https://mirror.sjtu.edu.cn/pypi/web/simple/</span><br><span class="line">豆瓣：http://pypi.douban.com/simple/</span><br></pre></td></tr></table></figure>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/08/14/Python%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/">
+    <time datetime="2023-08-14T12:06:07.000Z" class="entry-date">
+        2023-08-14
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6/" rel="tag">上海交通大学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6/" rel="tag">中国科学技术大学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6/" rel="tag">清华大学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B1%86%E7%93%A3/" rel="tag">豆瓣</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" rel="tag">阿里云</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-AI_BP神经网络" class="post-AI_BP神经网络 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/08/14/AI_BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">BP神经网络</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/08/14/AI_BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" data-id="cllb2psq00000q0w8gsvwej35" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="bp神经网络"><a class="markdownIt-Anchor" href="#bp神经网络"></a> BP神经网络</h1>
+<h2 id="注意-图中连接方式为全连接"><a class="markdownIt-Anchor" href="#注意-图中连接方式为全连接"></a> <strong>注意： 图中连接方式为全连接</strong></h2>
+<img src="/2023/08/14/AI_BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/1" class title="image-20220328195325803">
+<p>​                                浅层神经网络                                                              深度学习</p>
+<h2 id="感知器"><a class="markdownIt-Anchor" href="#感知器"></a> 感知器</h2>
+<img src="/2023/08/14/AI_BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/1.png" class title="image-20220328195052339">
+<p>作为 BP神经网络的单个节点</p>
+<h3 id="核心步骤"><a class="markdownIt-Anchor" href="#核心步骤"></a> 核心步骤</h3>
+<img src="/2023/08/14/AI_BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/3" class title="image-20220328195918011">
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/08/14/AI_BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+    <time datetime="2023-08-14T11:38:17.000Z" class="entry-date">
+        2023-08-14
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/AI/">AI</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" rel="tag">BP神经网络</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-AI损失函数" class="post-AI损失函数 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/08/14/AI%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/">损失函数</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/08/14/AI%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/" data-id="cllb2psqf000fq0w8gohpbmwi" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="损失函数"><a class="markdownIt-Anchor" href="#损失函数"></a> 损失函数</h1>
+<h2 id="mse"><a class="markdownIt-Anchor" href="#mse"></a> MSE</h2>
+<p><strong>损失函数</strong>(loss function) : 预测值(y) 与标准答案(y_)的差距<br>
+损失函数可以定量判断W、b的优劣，当损失函数输出最小时，参数W、b会出现最优值。</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">S</mi><mi mathvariant="normal">E</mi></mrow><mo stretchy="false">(</mo><mi>y</mi><mo separator="true">,</mo><msub><mi>y</mi><mo lspace="0em" rspace="0em">−</mo></msub><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mo stretchy="false">(</mo><mi>y</mi><mo>−</mo><msub><mi>y</mi><mo lspace="0em" rspace="0em">−</mo></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><mi>n</mi></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{MSE}(y,y_{-})=\frac{\sum_{k=0}^{n}(y-y_{-})^{2}}{n}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">M</span><span class="mord mathrm">S</span><span class="mord mathrm">E</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.189818em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5038179999999999em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">n</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.6897100000000003em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/08/14/AI%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/">
+    <time datetime="2023-08-14T11:38:17.000Z" class="entry-date">
+        2023-08-14
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/AI/">AI</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MSE/" rel="tag">MSE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%90%86%E8%AE%BA/" rel="tag">理论</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-AI梯度" class="post-AI梯度 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/08/14/AI%E6%A2%AF%E5%BA%A6/">梯度</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/08/14/AI%E6%A2%AF%E5%BA%A6/" data-id="cllb2psqi000mq0w8bfiuemqq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="梯度"><a class="markdownIt-Anchor" href="#梯度"></a> 梯度</h1>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>l</mi><mi>o</mi><mi>s</mi><mi>s</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msub><mi>w</mi><mi>t</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\partial loss}{\partial w_{t}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.20744em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord mathnormal">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>梯度——二维函数变化最快的方向</p>
+<p>梯度是一个矢量</p>
+<p>梯度越大，变化率越大</p>
+<h2 id="梯度下降算法"><a class="markdownIt-Anchor" href="#梯度下降算法"></a> 梯度下降算法</h2>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/08/14/AI%E6%A2%AF%E5%BA%A6/">
+    <time datetime="2023-08-14T11:38:17.000Z" class="entry-date">
+        2023-08-14
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/AI/">AI</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/" rel="tag">梯度下降算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%90%86%E8%AE%BA/" rel="tag">理论</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-C语言环境准备(VScode)" class="post-C语言环境准备(VScode) post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/08/14/C%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87(VScode)/">C语言环境准备（VScode）</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/08/14/C%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87(VScode)/" data-id="cllb2psqr001dq0w8e02w446e" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="c语言环境准备vscode"><a class="markdownIt-Anchor" href="#c语言环境准备vscode"></a> C语言环境准备（VScode）</h1>
+<h2 id="1vscode-c编译环境"><a class="markdownIt-Anchor" href="#1vscode-c编译环境"></a> 1.VScode C编译环境</h2>
+<ul>
+<li>下载mingw c语言编译器</li>
+<li>配置mingw bin 环境变量</li>
+<li>VScode安装code runner 插件</li>
+<li>VScode安装 C/C++扩展</li>
+<li>在终端中运行 ctrl + ， 输入 run in terminal勾选whether run in terminal  这样就可以正常编译了</li>
+</ul>
+<h2 id="2vscode-创建cc-项目"><a class="markdownIt-Anchor" href="#2vscode-创建cc-项目"></a> 2.VScode 创建C/C++ 项目</h2>
+<ul>
+<li>需要配合插件C/C++ Generator</li>
+<li>使用快捷键 ctrl + shift + p  选择</li>
+<li>选择Create C/C++ Project</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/08/14/C%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87(VScode)/">
+    <time datetime="2023-08-14T11:19:00.000Z" class="entry-date">
+        2023-08-14
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VScode-C%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/" rel="tag">VScode C编译环境</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VScode-%E5%88%9B%E5%BB%BAC-C-%E9%A1%B9%E7%9B%AE/" rel="tag">VScode 创建C&#x2F;C++ 项目</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%8F%E9%AA%8C/" rel="tag">经验</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-Python类" class="post-Python类 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/08/14/Python%E7%B1%BB/">Python类</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/08/14/Python%E7%B1%BB/" data-id="cllb2psqy001xq0w8gswp4tvv" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="ython类"><a class="markdownIt-Anchor" href="#ython类"></a> ython类</h1>
+<h2 id="iter迭代器"><a class="markdownIt-Anchor" href="#iter迭代器"></a> iter（迭代器）</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">test</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, data</span>):</span><br><span class="line">        self.__data = data</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__iter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">iter</span>(self.__data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = test([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line">运行结果为</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
+<h2 id="contains"><a class="markdownIt-Anchor" href="#contains"></a> contains</h2>
+<p>contains 方法可以判断子串是否在原字符串中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	接上例代码</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__contains__</span>(<span class="params">self, n</span>):</span><br><span class="line">    	<span class="keyword">if</span> n <span class="keyword">in</span> self.__data:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">b = test([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;4&#x27;</span> <span class="keyword">in</span> b)</span><br><span class="line"></span><br><span class="line">运行结果</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/08/14/Python%E7%B1%BB/">
+    <time datetime="2023-08-14T11:19:00.000Z" class="entry-date">
+        2023-08-14
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/Python%E7%B1%BB/">Python类</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/contains/" rel="tag">contains</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iter/" rel="tag">iter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-数据结构图" class="post-数据结构图 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2023/08/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9B%BE/">图</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://example.com/2023/08/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9B%BE/" data-id="cllb2psr10024q0w80wrv8y1t" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="图"><a class="markdownIt-Anchor" href="#图"></a> 图</h2>
+<p>顶点（vertex)</p>
+<p>边（edge）</p>
+<p><strong>简单实现</strong>： 邻接矩阵实现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">0 # 1 2 3 4 5 6		第一行 第一列代表节点</span><br><span class="line">###############</span><br><span class="line">1 # 0 1 0 0 1 0		如果 表中值为1则代表这两</span><br><span class="line">2 # 1 0 1 1 1 1 	个顶点通路</span><br><span class="line">3 # 0 0 1 0 1 0		2 --&gt; 1 代表顶点1 到    </span><br><span class="line">4 # 0 1 0 1 0 1		顶点2通路</span><br><span class="line">5 # 1 0 1 0 1 0</span><br><span class="line">6 # 1 1 0 1 0 1</span><br></pre></td></tr></table></figure>
+<p>更<strong>高效</strong>的实现方法是：<strong>邻接列表</strong></p>
+<p>维护一个包含所有顶点的主列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">v0,  --------&gt;  &#123;V1:<span class="number">5</span>,v5:<span class="number">2</span>&#125;</span><br><span class="line">v1,  --------&gt;  &#123;v2:<span class="number">4</span>&#125;</span><br><span class="line">v2,  --------&gt;  &#123;v3:<span class="number">2</span>&#125;</span><br><span class="line">v3,  --------&gt;  &#123;v4:<span class="number">7</span>&#125;</span><br><span class="line">v4,  --------&gt;  </span><br><span class="line">v5   --------&gt;</span><br><span class="line">]<span class="comment"># 主列表</span></span><br></pre></td></tr></table></figure>
+<h2 id="广度优先算法breadth-first-searchbfs"><a class="markdownIt-Anchor" href="#广度优先算法breadth-first-searchbfs"></a> 广度优先算法Breadth First Search（BFS）</h2>
+<p>类似与一层一层的遍历</p>
+<p>先选择一条路径，走到最深处，若不匹配就回溯知道有另一条路径，知道找到匹配的值</p>
+<p>所以bfs</p>
+<p>需要三个特有<strong>属性</strong></p>
+<ol>
+<li>顶点回溯</li>
+<li>顶点标记（如为走过： 白色 走过： 黑色 当前顶点：红色）</li>
+</ol>
+<h2 id="图的应用"><a class="markdownIt-Anchor" href="#图的应用"></a> 图的应用</h2>
+<p>寻路、词阶。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2023/08/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9B%BE/">
+    <time datetime="2023-08-14T11:19:00.000Z" class="entry-date">
+        2023-08-14
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bfs/" rel="tag">bfs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
+  
+    <nav id="pagination">
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
+      </nav>
+    </nav>
+  
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-content">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jupyter-Notebook/">Jupyter Notebook</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python%E7%B1%BB/">Python类</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tensorflow/">Tensorflow</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/c%E8%AF%AD%E8%A8%80/">c语言</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B3%A8%E9%87%8A/">注释</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2023/08/14/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0&%E6%93%8D%E4%BD%9C%E7%AC%A6/">C语言函数&amp;操作符</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/14/AI%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">线性回归</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/14/Python_Pandas/">pandas</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/14/Python_Matplotlib/">Matplotlib</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/14/Python_Numpy/">Numpy</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/51%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/" rel="tag">51命名规则</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" rel="tag">BP神经网络</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jupyter%E4%BD%BF%E7%94%A8anacona%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/" rel="tag">Jupyter使用anacona虚拟环境</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jupyter%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="tag">Jupyter快捷键</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MSE/" rel="tag">MSE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" rel="tag">Python第三方库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STC89C52/" rel="tag">STC89C52</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tensor%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" rel="tag">Tensor常用函数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VScode-C%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/" rel="tag">VScode C编译环境</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VScode-%E5%88%9B%E5%BB%BAC-C-%E9%A1%B9%E7%9B%AE/" rel="tag">VScode 创建C&#x2F;C++ 项目</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/argmax/" rel="tag">argmax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/assign-sub/" rel="tag">assign_sub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/axis%E5%8F%82%E6%95%B0/" rel="tag">axis参数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bfs/" rel="tag">bfs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/const/" rel="tag">const</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contains/" rel="tag">contains</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/enum/" rel="tag">enum</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/enumerate/" rel="tag">enumerate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/extern/" rel="tag">extern</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iter/" rel="tag">iter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ndarray/" rel="tag">ndarray</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/one-hot/" rel="tag">one_hot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" rel="tag">python第三方库</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scanf/" rel="tag">scanf</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scanf%E5%87%BD%E6%95%B0%EF%BC%88scanf-s%EF%BC%89/" rel="tag">scanf函数（scanf_s）</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scikit-learn/" rel="tag">scikit-learn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sizeof/" rel="tag">sizeof</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6/" rel="tag">上海交通大学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6/" rel="tag">中国科学技术大学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" rel="tag">作用域与生命周期</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%98%E9%87%8F/" rel="tag">变量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/" rel="tag">四则运算</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AATensor/" rel="tag">如何创建一个Tensor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag">字符串</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%8E%87/" rel="tag">学习率</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%86%E5%8F%98%E9%87%8F%E6%A0%87%E8%AE%B0%E4%B8%BA%E5%8F%AF%E8%AE%AD%E7%BB%83%E7%9A%84/" rel="tag">将变量标记为可训练的</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B8%B8%E9%87%8F/" rel="tag">常量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B3%E5%9D%87%E5%88%86%E5%B8%83%E7%94%9F%E6%88%90%E5%BC%A0%E9%87%8F/" rel="tag">平均分布生成张量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B3%E6%96%B9%E3%80%81%E6%AC%A1%E6%96%B9%E3%80%81%E5%BC%80%E6%96%B9/" rel="tag">平方、次方、开方</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%A0%E9%87%8F/" rel="tag">张量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%BA%E8%BD%AC%E5%9E%8B/" rel="tag">强转型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" rel="tag">循环语句</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%AC%A6/" rel="tag">操作符</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="tag">数据类型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E5%A4%A7/" rel="tag">最大</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E5%B0%8F/" rel="tag">最小</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%87%E5%87%86%E5%B7%AE%E7%94%9F%E6%88%90/" rel="tag">标准差生成</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/" rel="tag">梯度下降算法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E6%80%81%E7%94%9F%E6%88%90/" rel="tag">正态生成</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B1%82%E5%AF%BC/" rel="tag">求导</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B2%BF%E7%9D%80%E6%8C%87%E5%AE%9A%E5%BC%A0%E9%87%8F%E6%B1%82%E5%92%8C/" rel="tag">沿着指定张量求和</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B2%BF%E7%9D%80%E6%8C%87%E5%AE%9A%E5%BC%A0%E9%87%8F%E6%B1%82%E5%9D%87%E5%80%BC/" rel="tag">沿着指定张量求均值</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6/" rel="tag">清华大学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%B9%E5%BE%81%E4%B8%8E%E6%A0%87%E7%AD%BE%E9%85%8D%E5%AF%B9/" rel="tag">特征与标签配对</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8B%AC%E7%83%AD%E7%BC%96%E7%A0%81/" rel="tag">独热编码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%90%86%E8%AE%BA/" rel="tag">理论</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/" rel="tag">矩阵乘法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%8F%E9%AA%8C/" rel="tag">经验</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B1%86%E7%93%A3/" rel="tag">豆瓣</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AC%E7%A7%BB%E5%AD%97%E7%AC%A6/" rel="tag">转移字符</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5/" rel="tag">选择语句</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" rel="tag">阿里云</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/51%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/" style="font-size: 10px;">51命名规则</a> <a href="/tags/BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">BP神经网络</a> <a href="/tags/Jupyter%E4%BD%BF%E7%94%A8anacona%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">Jupyter使用anacona虚拟环境</a> <a href="/tags/Jupyter%E5%BF%AB%E6%8D%B7%E9%94%AE/" style="font-size: 10px;">Jupyter快捷键</a> <a href="/tags/MSE/" style="font-size: 10px;">MSE</a> <a href="/tags/Python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" style="font-size: 10px;">Python第三方库</a> <a href="/tags/STC89C52/" style="font-size: 10px;">STC89C52</a> <a href="/tags/Tensor%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" style="font-size: 10px;">Tensor常用函数</a> <a href="/tags/VScode-C%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">VScode C编译环境</a> <a href="/tags/VScode-%E5%88%9B%E5%BB%BAC-C-%E9%A1%B9%E7%9B%AE/" style="font-size: 10px;">VScode 创建C/C++ 项目</a> <a href="/tags/argmax/" style="font-size: 10px;">argmax</a> <a href="/tags/assign-sub/" style="font-size: 10px;">assign_sub</a> <a href="/tags/axis%E5%8F%82%E6%95%B0/" style="font-size: 10px;">axis参数</a> <a href="/tags/bfs/" style="font-size: 10px;">bfs</a> <a href="/tags/const/" style="font-size: 10px;">const</a> <a href="/tags/contains/" style="font-size: 10px;">contains</a> <a href="/tags/enum/" style="font-size: 15px;">enum</a> <a href="/tags/enumerate/" style="font-size: 10px;">enumerate</a> <a href="/tags/extern/" style="font-size: 15px;">extern</a> <a href="/tags/iter/" style="font-size: 10px;">iter</a> <a href="/tags/ndarray/" style="font-size: 10px;">ndarray</a> <a href="/tags/one-hot/" style="font-size: 10px;">one_hot</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/python%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" style="font-size: 20px;">python第三方库</a> <a href="/tags/scanf/" style="font-size: 10px;">scanf</a> <a href="/tags/scanf%E5%87%BD%E6%95%B0%EF%BC%88scanf-s%EF%BC%89/" style="font-size: 10px;">scanf函数（scanf_s）</a> <a href="/tags/scikit-learn/" style="font-size: 10px;">scikit-learn</a> <a href="/tags/sizeof/" style="font-size: 10px;">sizeof</a> <a href="/tags/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6/" style="font-size: 10px;">上海交通大学</a> <a href="/tags/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6/" style="font-size: 10px;">中国科学技术大学</a> <a href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" style="font-size: 10px;">作用域与生命周期</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%8F%98%E9%87%8F/" style="font-size: 10px;">变量</a> <a href="/tags/%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/" style="font-size: 10px;">四则运算</a> <a href="/tags/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AATensor/" style="font-size: 10px;">如何创建一个Tensor</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 10px;">字符串</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%8E%87/" style="font-size: 10px;">学习率</a> <a href="/tags/%E5%B0%86%E5%8F%98%E9%87%8F%E6%A0%87%E8%AE%B0%E4%B8%BA%E5%8F%AF%E8%AE%AD%E7%BB%83%E7%9A%84/" style="font-size: 10px;">将变量标记为可训练的</a> <a href="/tags/%E5%B8%B8%E9%87%8F/" style="font-size: 10px;">常量</a> <a href="/tags/%E5%B9%B3%E5%9D%87%E5%88%86%E5%B8%83%E7%94%9F%E6%88%90%E5%BC%A0%E9%87%8F/" style="font-size: 10px;">平均分布生成张量</a> <a href="/tags/%E5%B9%B3%E6%96%B9%E3%80%81%E6%AC%A1%E6%96%B9%E3%80%81%E5%BC%80%E6%96%B9/" style="font-size: 10px;">平方、次方、开方</a> <a href="/tags/%E5%BC%A0%E9%87%8F/" style="font-size: 10px;">张量</a> <a href="/tags/%E5%BC%BA%E8%BD%AC%E5%9E%8B/" style="font-size: 10px;">强转型</a> <a href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">循环语句</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 20px;">技术</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%AC%A6/" style="font-size: 15px;">操作符</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" style="font-size: 10px;">数据类型</a> <a href="/tags/%E6%9C%80%E5%A4%A7/" style="font-size: 10px;">最大</a> <a href="/tags/%E6%9C%80%E5%B0%8F/" style="font-size: 10px;">最小</a> <a href="/tags/%E6%A0%87%E5%87%86%E5%B7%AE%E7%94%9F%E6%88%90/" style="font-size: 10px;">标准差生成</a> <a href="/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/" style="font-size: 10px;">梯度下降算法</a> <a href="/tags/%E6%AD%A3%E6%80%81%E7%94%9F%E6%88%90/" style="font-size: 10px;">正态生成</a> <a href="/tags/%E6%B1%82%E5%AF%BC/" style="font-size: 10px;">求导</a> <a href="/tags/%E6%B2%BF%E7%9D%80%E6%8C%87%E5%AE%9A%E5%BC%A0%E9%87%8F%E6%B1%82%E5%92%8C/" style="font-size: 10px;">沿着指定张量求和</a> <a href="/tags/%E6%B2%BF%E7%9D%80%E6%8C%87%E5%AE%9A%E5%BC%A0%E9%87%8F%E6%B1%82%E5%9D%87%E5%80%BC/" style="font-size: 10px;">沿着指定张量求均值</a> <a href="/tags/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6/" style="font-size: 10px;">清华大学</a> <a href="/tags/%E7%89%B9%E5%BE%81%E4%B8%8E%E6%A0%87%E7%AD%BE%E9%85%8D%E5%AF%B9/" style="font-size: 10px;">特征与标签配对</a> <a href="/tags/%E7%8B%AC%E7%83%AD%E7%BC%96%E7%A0%81/" style="font-size: 10px;">独热编码</a> <a href="/tags/%E7%90%86%E8%AE%BA/" style="font-size: 15px;">理论</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/" style="font-size: 10px;">矩阵乘法</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 15px;">算法</a> <a href="/tags/%E7%BB%8F%E9%AA%8C/" style="font-size: 20px;">经验</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 10px;">语法</a> <a href="/tags/%E8%B1%86%E7%93%A3/" style="font-size: 10px;">豆瓣</a> <a href="/tags/%E8%BD%AC%E7%A7%BB%E5%AD%97%E7%AC%A6/" style="font-size: 10px;">转移字符</a> <a href="/tags/%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">选择语句</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 10px;">阿里云</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2023 Polaris
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
